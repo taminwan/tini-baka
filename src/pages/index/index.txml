@@ -1,6 +1,9 @@
 <view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
   <view class="top">
     <image 
+      class="header-bg"
+      src="/images/header_bg.png"/>
+    <image 
       class="top-logo"
       src="/images/BAKA_LOGO.svg" />
     <view class="top-content">
