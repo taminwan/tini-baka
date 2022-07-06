@@ -1,0 +1,11 @@
+{
+  "name": "baka",
+  "version": "0.1.0",
+  "tiki": {
+    "appIdentifier": "vn.tiki.miniapp.baka",
+    "buildNumber": 1
+  },
+  "dependencies": {
+    "@tiki.vn/tini-ui": "^0.12.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/discovery/index",
+    "pages/warehouse/index",
+    "pages/me/index"
+  ],
+  "window": {
+    "defaultTitle": "BaKa"
+  },
+  "tabBar": {
+    "items": [
+      { 
+        "name": "BAKA", 
+        "pagePath": "pages/index/index",
+        "icon": "images/ic_house.png",
+        "activeIcon": "images/ic_house_active.png"
+      },
+      { 
+        "name": "Khám phá", 
+        "pagePath": "pages/discovery/index",
+        "icon": "images/ic_star.png",
+        "activeIcon": "images/ic_star_active.png"
+      },
+      { 
+        "name": "Kho của tui", 
+        "pagePath": "pages/warehouse/index",
+        "icon": "images/ic_book.png",
+        "activeIcon": "images/ic_book_active.png"
+      },
+      { 
+        "name": "Tui", 
+        "pagePath": "pages/me/index",
+        "icon": "images/ic_me.png",
+        "activeIcon": "images/ic_me.png"
+      }
+    ]
+  }
+}
