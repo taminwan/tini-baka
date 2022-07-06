@@ -1,1 +1,40 @@
-<view>BaKa main page</view>
+<view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
+  <view class="top">
+    <image 
+      class="top-logo"
+      src="/images/BAKA_LOGO.svg" />
+    <view class="top-content">
+      <text class="greeting" number-of-lines="{{1}}">
+        Hi, I'm  BAKA in black!
+      </text>
+    </view>
+  </view>
+  
+  <view class="content">
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+  </view>
+  
+</view>

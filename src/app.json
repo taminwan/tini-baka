@@ -6,7 +6,7 @@
     "pages/me/index"
   ],
   "window": {
-    "defaultTitle": "BaKa"
+    "defaultTitle": ""
   },
   "tabBar": {
     "items": [
