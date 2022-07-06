@@ -32,7 +32,7 @@
         "name": "Tui", 
         "pagePath": "pages/me/index",
         "icon": "images/ic_me.png",
-        "activeIcon": "images/ic_me.png"
+        "activeIcon": "images/ic_me_active.png"
       }
     ]
   }
