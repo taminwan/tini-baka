@@ -13,26 +13,26 @@
       { 
         "name": "BAKA", 
         "pagePath": "pages/index/index",
-        "icon": "images/ic_house.png",
-        "activeIcon": "images/ic_house_active.png"
+        "icon": "images/ic_house.svg",
+        "activeIcon": "images/ic_house_active.svg"
       },
       { 
         "name": "Khám phá", 
         "pagePath": "pages/discovery/index",
-        "icon": "images/ic_star.png",
-        "activeIcon": "images/ic_star_active.png"
+        "icon": "images/ic_star.svg",
+        "activeIcon": "images/ic_star_active.svg"
       },
       { 
         "name": "Kho của tui", 
         "pagePath": "pages/warehouse/index",
-        "icon": "images/ic_book.png",
-        "activeIcon": "images/ic_book_active.png"
+        "icon": "images/ic_book.svg",
+        "activeIcon": "images/ic_book_active.svg"
       },
       { 
         "name": "Tui", 
         "pagePath": "pages/me/index",
-        "icon": "images/ic_me.png",
-        "activeIcon": "images/ic_me_active.png"
+        "icon": "images/ic_me.svg",
+        "activeIcon": "images/ic_me_active.svg"
       }
     ]
   }
