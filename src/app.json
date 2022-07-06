@@ -6,9 +6,12 @@
     "pages/me/index"
   ],
   "window": {
-    "defaultTitle": ""
+    "defaultTitle": "",
+    "allowsBounceVertical": "NO"
   },
   "tabBar": {
+    "backgroundColor": "#000000",
+    "selectedColor": "#58FFE1",
     "items": [
       { 
         "name": "BAKA", 
