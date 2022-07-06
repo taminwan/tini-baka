@@ -108,7 +108,7 @@
 .content view {
 	width: calc(50% - 16px);
 	height: 80px;
-	background: #000000;
+	background: #aca8a8;
 	margin: 8px;
 }
  
