@@ -5,6 +5,7 @@
 :root {
   --control-width: 90px;
   --top-icon-size: 24px;
+  --color-alias-outline-variant:  0px;
 }
 
 .wrap {
@@ -112,3 +113,7 @@
 	margin: 8px;
 }
  
+.tu-tabs-bar {
+  border-bottom: none !important;
+  box-sizing: none !important;
+}

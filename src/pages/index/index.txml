@@ -6,38 +6,49 @@
     <image 
       class="top-logo"
       src="/images/BAKA_LOGO.svg" />
-    <view class="top-content">
-      <text class="greeting" number-of-lines="{{1}}">
-        Hi, I'm  BAKA in black!
-      </text>
-    </view>
   </view>
   
-  <view class="content">
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
-  </view>
+  <view>
+    <tabs 
+      tabs="{{tabs}}" 
+      tabsName="activeTab" 
+      onTabClick="handleTabClick" 
+      onChange="handleTabChange" 
+      activeTab="{{activeTab}}" 
+      swipeable="{{isSwipeable}}" 
+      hasSubTitle="{{true}}" 
+      tabContentHeight="{{activeTab === 0 ? '150px' : activeTab === 2 ? '200px' : '50vh'}}" 
+      tabBarBackgroundColor="black"
+      tabBarUnderlineHeight="3px"
+      tabBarUnderlineWidth="31px"
+      tabBarUnderlineColor="white"
+      tabBarActiveTextColor="white"
+      stickyBar="{{true}}">
+      <block tiki:for="{{tabs}}" tiki:if="{{!isSwipeable}}">
+        <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" tiki:if="{{index === 0}}">
+          <view class="tab-content" style="height: 1000px;">Tab 1 height 130</view>
+        </tab-content>
+        <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" tiki:elif="{{index === 1}}">
+          <view class="tab-content" style="height: 1200px;">Tab 2 height 1200</view>
+        </tab-content>
+        <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}"
+          tiki:else>
+          <view class="tab-content">content of {{item.title}}</view>
+        </tab-content>
+      </block>
   
+      <block tiki:for="{{tabs}}" tiki:if="{{isSwipeable}}">
+        <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" tiki:if="{{index === 0}}">
+          <view class="tab-content" style="height: 130px;">Tab 1 height 130</view>
+        </tab-content>
+        <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" tiki:elif="{{index === 2}}">
+          <view class="tab-content" style="height: 200px;">Tab 2 height 200</view>
+        </tab-content>
+        <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}"
+          tiki:else>
+          <view class="tab-content">content of {{item.title}}</view>
+        </tab-content>
+      </block>
+    </tabs>
+  </view>
 </view>
