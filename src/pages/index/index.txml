@@ -18,7 +18,7 @@
       swipeable="{{isSwipeable}}" 
       hasSubTitle="{{true}}" 
       tabContentHeight="{{activeTab === 0 ? '150px' : activeTab === 2 ? '200px' : '50vh'}}" 
-      tabBarBackgroundColor="black"
+      tabBarBackgroundColor="#0000"
       tabBarUnderlineHeight="3px"
       tabBarUnderlineWidth="31px"
       tabBarUnderlineColor="white"

@@ -18,7 +18,7 @@
   position: absolute;
   top: calc(var(--tf-status-bar-height));
   margin: 0 auto;
-  opacity: 6%;
+  opacity: 16%;
 }
 
 .top-header {
@@ -116,4 +116,5 @@
 .tu-tabs-bar {
   border-bottom: none !important;
   box-sizing: none !important;
+  z-index: 1;
 }
