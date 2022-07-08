@@ -24,7 +24,7 @@
 
         <view class="product__price">
           <text class="text" number-of-lines="{{ 1 }}">
-            {{ moneyFormatter(product.price, " ₫") }}
+            {{ moneyFormatter(product.price, " ASA") }}
           </text>
           <icon class="icon" type="plus" color="#ffffff" />
         </view>

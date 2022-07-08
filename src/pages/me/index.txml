@@ -1,1 +1,14 @@
-<view>Tao main page</view>
+<view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
+  <view class="top">
+    <image class="header-bg" src="/images/header_bg.png" />
+    <image class="top-logo" src="/images/BAKA_LOGO.svg" />
+  </view>
+  <view class="me__btn" style="margin-top: 20px;">
+    <button onTap="getAuthCode" style="width: 100%">Get Authen Code</button>
+  </view>
+
+  <view class="me__content" style="margin-top: 20px; color: white">
+    <text>{{code}}</text>
+  </view>
+
+</view>
