@@ -1,0 +1,10 @@
+<view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
+  <view class="top">
+    <image class="header-bg" src="/images/header_bg.png" />
+  </view>
+  <view>
+    <view class="bid-product" tiki:if="{{!isLoading}}">
+      <bid-item product="{{bidProduct}}" isLoading="{{isLoading}}" />
+    </view>
+  </view>
+</view>

@@ -15,12 +15,17 @@
           <view class="tab-content">
             <view class="bid-product" tiki:if="{{!isLoading}}">
               <bid-item product="{{bidProduct}}" isLoading="{{isLoading}}" />
+              <view class="blue__button" onTap="navigateToRanking">
+                <text class="text" number-of-lines="{{ 1 }}">
+                  Bid lun!
+                </text>
+              </view>
             </view>
           </view>
         </tab-content>
         <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" tiki:elif="{{index === 1}}">
           <view class="tab-content" tiki:if="{{!isLoading}}" tiki:for="{{stalkProducts}}">
-              <stalk-item propsItem="{{item}}" isLoading="{{isLoading}}" />
+            <stalk-item propsItem="{{item}}" isLoading="{{isLoading}}" />
           </view>
         </tab-content>
       </block>

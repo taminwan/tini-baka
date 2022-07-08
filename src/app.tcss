@@ -4,6 +4,7 @@
 
 :root {
   --control-width: 90px;
+  --button-width: 50px;
   --top-icon-size: 24px;
   --color-alias-outline-variant:  0px;
 }
@@ -127,8 +128,7 @@
   border-radius: 30px;
   color: white;
   padding: 5px 13px;
-  display: flex;
-  width: var(--control-width);
+  width: var(--button-width);
   justify-content: space-between;
   align-items: center;
 }

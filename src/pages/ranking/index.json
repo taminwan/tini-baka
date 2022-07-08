@@ -1,0 +1,6 @@
+{
+  "transparentTitle": "always",
+  "usingComponents": {
+    "bid-item": "components/bid-item/index"
+  }
+}

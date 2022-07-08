@@ -55,6 +55,12 @@ Page({
     }
   },
 
+  navigateToRanking() {
+    my.navigateTo({
+      url: 'pages/ranking/index',
+    });
+  },
+
   onLoad(query) {
   },
   onReady() {
