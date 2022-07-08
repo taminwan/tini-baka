@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
 .page {
   background-color: #000000;
 }
@@ -6,11 +11,11 @@
   --control-width: 90px;
   --button-width: 50px;
   --top-icon-size: 24px;
-  --color-alias-outline-variant:  0px;
+  --color-alias-outline-variant: 0px;
 }
 
 .wrap {
-	position: relative;
+  position: relative;
 }
 
 .header-bg {
@@ -22,10 +27,28 @@
   opacity: 12%;
 }
 
+.header-back {
+  border-radius: 100% !important;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  background: rgba(88, 255, 225, 0.12);
+  border: none;
+}
+
+.header-back:hover,
+.header-back:focus {
+  background: rgba(88, 255, 225, 0.12);
+  border: none;
+}
+
 .top-header {
-	position: fixed;
-	top: 0;
-	left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   right: 0;
   z-index: 1;
 }
@@ -47,37 +70,37 @@
 }
 
 .fix-search .top-header {
-	background: #fff;
+  background: #fff;
 }
 
 .search {
-	position: absolute;
+  position: absolute;
   background: #017fff;
-	top: calc(var(--tf-status-bar-height) + 48px);
-	left: 0;
-	right: 0;
+  top: calc(var(--tf-status-bar-height) + 48px);
+  left: 0;
+  right: 0;
   padding: 8px 16px;
 }
 
 .fix-search .search {
-	background: #fff;
+  background: #fff;
   border-bottom: solid 1px #ccc;
 }
 
 .search .input {
   width: 100%;
-	transition: width 0.2s;
+  transition: width 0.2s;
   display: block;
 }
 
 .fix-search .search {
-	position: fixed;
+  position: fixed;
   padding-top: calc(var(--tf-status-bar-height) + 5px);
   top: 0;
 }
 
 .fix-search .search input {
-	width: calc(100% - var(--control-width) - var(--cart-size));
+  width: calc(100% - var(--control-width) - var(--cart-size));
 }
 
 .top {
@@ -86,10 +109,10 @@
 }
 
 .top-content {
-	width: 100%;
-	height: 45px;
+  width: 100%;
+  height: 45px;
   background: #000;
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 .greeting {
@@ -101,19 +124,19 @@
 }
 
 .content {
-	padding: 8px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .content view {
-	width: calc(50% - 16px);
-	height: 80px;
-	background: #aca8a8;
-	margin: 8px;
+  width: calc(50% - 16px);
+  height: 80px;
+  background: #aca8a8;
+  margin: 8px;
 }
- 
+
 .tu-tabs-bar {
   border-bottom: none !important;
   box-sizing: none !important;

@@ -18,7 +18,7 @@
       <view class="product__top">
         <image
           class="product__img"
-          src="https://vnw-img-cdn.popsww.com/api/v2/containers/file2/cms_thumbnails/b_ng_m_t_ng_y_tr__th_nh_con_g_i-5bd4d028cf68-1654846698168-a0KgQbAn.jpeg?v=0&maxW=260&format=jpg"
+          src="{{ product.thumbnail_url }}"
           mode="widthFix"
         ></image>
 

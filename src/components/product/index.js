@@ -5,7 +5,7 @@ Component({
     product: {
       id: "",
       name: "",
-      thumbnail_url: "",
+      thumbnail_url: "/images/product/product_item.jpg",
       price: 0,
     },
     onTapProduct: () => {},

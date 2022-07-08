@@ -4,7 +4,8 @@
     "pages/discovery/index",
     "pages/warehouse/index",
     "pages/me/index",
-    "pages/ranking/index"
+    "pages/ranking/index",
+    "pages/discoveryDetail/index"
   ],
   "window": {
     "defaultTitle": "",
