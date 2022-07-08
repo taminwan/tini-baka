@@ -1,0 +1,21 @@
+.bid-item-badge {
+  font-size: 10px;
+  background: #ff424e;
+}
+
+.bid-item-old-price {
+  font-size: 10px;
+  text-decoration-line: line-through;
+}
+
+.bid-item image,
+.bid-item-image-skeleton {
+  width: auto;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.bid-item-title {
+  font-size: 16px;
+  color: #fff;
+}

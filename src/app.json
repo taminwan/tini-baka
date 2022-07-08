@@ -11,6 +11,8 @@
     "allowsBounceVertical": "NO"
   },
   "tabBar": {
+    "borderTopActiveColor": "#000000",
+    "borderTopColor": "#000000",
     "backgroundColor": "#000000",
     "selectedColor": "#58FFE1",
     "items": [

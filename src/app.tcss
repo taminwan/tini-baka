@@ -18,7 +18,7 @@
   position: absolute;
   top: calc(var(--tf-status-bar-height));
   margin: 0 auto;
-  opacity: 16%;
+  opacity: 12%;
 }
 
 .top-header {
