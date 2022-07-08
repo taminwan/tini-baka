@@ -28,13 +28,13 @@ export const getRankingList = () => {
   return fakeRequest([
     {
       name:"tung.tran",
-      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
+      avatar:"https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
       price: "3.313,45",
       icStatus: ""
     },
     {
       name:"van.vuk",
-      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
+      avatar:"https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png",
       price: "313,12",
       icStatus: ""
     },
@@ -52,7 +52,7 @@ export const getRankingList = () => {
     },
     {
       name:"tinhhuynh",
-      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
+      avatar:"https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
       price: "0,5",
       icStatus: ""
     }
