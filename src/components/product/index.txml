@@ -1,0 +1,43 @@
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<view class="product {{ className }}">
+  <template name="product-loading">
+    <view>
+      <view class="skeleton product-thumbnail-skeleton radius-8px mb-2x-small">
+      </view>
+      <view
+        class="skeleton skeleton-font-medium skeleton-100-width mb-4x-small"
+      >
+      </view>
+      <view class="skeleton skeleton-font-medium skeleton-70-width"> </view>
+    </view>
+  </template>
+
+  <template name="product-completed">
+    <view class="product__content" catchTap="_onTapProduct">
+      <view class="product__top">
+        <image
+          class="product__img"
+          src="https://vnw-img-cdn.popsww.com/api/v2/containers/file2/cms_thumbnails/b_ng_m_t_ng_y_tr__th_nh_con_g_i-5bd4d028cf68-1654846698168-a0KgQbAn.jpeg?v=0&maxW=260&format=jpg"
+          mode="widthFix"
+        ></image>
+
+        <view class="product__price">
+          <text class="text" number-of-lines="{{ 1 }}">
+            {{ moneyFormatter(product.price, " ₫") }}
+          </text>
+          <icon class="icon" type="plus" color="#ffffff" />
+        </view>
+      </view>
+
+      <text class="product__name" number-of-lines="{{ 2 }}">
+        {{ product.name }}
+      </text>
+    </view>
+  </template>
+
+  <template
+    is="product-{{ isLoading ? 'loading' : 'completed' }}"
+    data="{{ product }}"
+  ></template>
+</view>

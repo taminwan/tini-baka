@@ -1,1 +1,73 @@
-<view>Discovery main page</view>
+<view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
+  <view class="top">
+    <image class="header-bg" src="/images/header_bg.png" />
+    <image class="top-logo" src="/images/BAKA_LOGO.svg" />
+  </view>
+
+  <view class="discovery__search">
+    <search-bar placeholder="Tìm kiếm" onInput="onChangeSearchInput" onConfirm="onConfirm" onClear="clearSearchInput"
+      value="{{searchTerm}}" />
+  </view>
+
+  <view class="discovery__content">
+
+    <view class="discovery__section">
+      <text class="discovery__title">
+        COMICOLA độc quyền
+      </text>
+      <scroll-view class="discovery__list" style="height: 288px;" scroll-x="{{true}}">
+        <block
+          tiki:for="{{listComicola}}"
+          tiki:key="id"
+        >
+        <view class="discovery__item ">
+          <product
+            product="{{item}}"
+            onTapProduct="onTapProduct"
+          />
+        </view>
+      </block>
+      </scroll-view>
+    </view>
+
+    <view class="discovery__section">
+      <text class="discovery__title">
+        Kinh điển - ĐỌC ĐỂ không tối cổ
+      </text>
+      <scroll-view class="discovery__list" style="height: 288px;" scroll-x="{{true}}">
+        <block
+          tiki:for="{{listComicola}}"
+          tiki:key="id"
+        >
+        <view class="discovery__item ">
+          <product
+            product="{{item}}"
+            onTapProduct="onTapProduct"
+          />
+        </view>
+      </block>
+      </scroll-view>
+    </view>
+
+    <view class="discovery__section">
+      <text class="discovery__title">
+        Full bộ không cần chờ
+      </text>
+      <scroll-view class="discovery__list" style="height: 288px;" scroll-x="{{true}}">
+        <block
+          tiki:for="{{listComicola}}"
+          tiki:key="id"
+        >
+        <view class="discovery__item ">
+          <product
+            product="{{item}}"
+            onTapProduct="onTapProduct"
+          />
+        </view>
+      </block>
+      </scroll-view>
+    </view>
+
+  </view>
+
+</view>

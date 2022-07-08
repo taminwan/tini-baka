@@ -1,0 +1,15 @@
+<view class="{{`${className}`}}" onTap="_onTap">
+  <view class="search-bar">
+    <input class="search-input" placeholder="{{placeholder}}" value="{{value}}" focus="{{focus}}" onInput="onInput"
+      onConfirm="onConfirm" />
+
+    <view tiki:if="{{value}}" class="close-icon" catchTap="onClear">
+      <icon type="close" color="#ffffff" />
+    </view>
+
+    <view tiki:if="{{!value}}">
+      <icon class="search-icon" type="search" color="#ffffff" />
+    </view>
+
+  </view>
+</view>
