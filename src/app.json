@@ -19,8 +19,8 @@
       { 
         "name": "BAKA", 
         "pagePath": "pages/index/index",
-        "icon": "images/ic_house.svg",
-        "activeIcon": "images/ic_house_active.svg"
+        "icon": "images/ic_house.png",
+        "activeIcon": "images/ic_house_active.png"
       },
       { 
         "name": "Khám phá", 
