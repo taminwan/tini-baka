@@ -1,0 +1,29 @@
+<view>
+  <view tiki:if="{{isLoading}}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small" />
+    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small" />
+    <view class="skeleton skeleton-font-medium skeleton-100-width" />
+  </view>
+  <view tiki:else>
+    <text class="bid-item-title" number-of-lines="{{1}}">
+      {{propsItem.seller.name}}
+    </text>
+    <text class="bid-item-title" number-of-lines="{{1}}">
+      {{propsItem.seller.time}}
+    </text>
+
+    <image class="radius-8px mb-2x-small radius-8px items-center" style="width: 118px; height: 178px;"
+      src="{{propsItem.thumbnail}}" />
+    <text class="bid-item-title" number-of-lines="{{3}}">
+      {{propsItem.name}}
+    </text>
+    <view class="flex items-center">
+      <text class="bid-item-title" number-of-lines="{{1}}">
+        {{propsItem.title}}
+      </text>
+      <text class="bid-item-title" number-of-lines="{{1}}">
+        {{propsItem.no_bidding_counter}}
+      </text>
+    </view>
+  </view>
+</view>

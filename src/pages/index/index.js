@@ -1,10 +1,10 @@
-import { getBiddingProducts, getWatchoutProducts } from '../../services/index';
+import { getBiddingProducts, getStalktProducts } from '../../services/index';
 
 
 Page({
   data: {
     bidProduct: {},
-    watchoutProducts: [],
+    stalkProducts: [],
     isLoading: true,
     tabs: [
       {
@@ -34,17 +34,17 @@ Page({
     });
 
     try {
-      const [bid_product, watchout_products] = await Promise.all([
+      const [bid_product, stalk_products] = await Promise.all([
         getBiddingProducts(),
-        getWatchoutProducts(),
+        getStalktProducts(),
       ]);
 
       console.log('Bid products reponse: ', bid_product)
-      console.log('Watchout products reponse: ', watchout_products)
+      console.log('Stalk products reponse: ', stalk_products)
 
       this.setData({
         bidProduct: bid_product,
-        watchoutProducts: watchout_products,
+        stalkProducts: stalk_products,
         isLoading: false,
       });
     } catch (error) {

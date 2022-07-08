@@ -3,6 +3,7 @@
   "usingComponents": {
     "tabs": "@tiki.vn/tini-ui/es/tabs/index",
     "tab-content": "@tiki.vn/tini-ui/es/tabs/tab-content/index",
-    "bid-item": "components/bid-item/index"
+    "bid-item": "components/bid-item/index",
+    "stalk-item": "components/stalk-item/index"
   }
 }
