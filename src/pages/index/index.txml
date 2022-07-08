@@ -1,41 +1,26 @@
 <view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
   <view class="top">
-    <image 
-      class="header-bg"
-      src="/images/header_bg.png"/>
-    <image 
-      class="top-logo"
-      src="/images/BAKA_LOGO.svg" />
+    <image class="header-bg" src="/images/header_bg.png" />
+    <image class="top-logo" src="/images/BAKA_LOGO.svg" />
   </view>
-  
+
   <view>
-    <tabs 
-      tabs="{{tabs}}" 
-      tabsName="activeTab" 
-      onTabClick="handleTabClick" 
-      onChange="handleTabChange" 
-      activeTab="{{activeTab}}" 
-      swipeable="{{isSwipeable}}" 
-      hasSubTitle="{{true}}" 
-      tabContentHeight="{{activeTab === 0 ? '150px' : activeTab === 2 ? '200px' : '50vh'}}" 
-      tabBarBackgroundColor="#0000"
-      tabBarUnderlineHeight="3px"
-      tabBarUnderlineWidth="31px"
-      tabBarUnderlineColor="white"
-      tabBarActiveTextColor="white"
-      stickyBar="{{true}}">
+    <tabs tabs="{{tabs}}" tabsName="activeTab" onTabClick="handleTabClick" onChange="handleTabChange"
+      activeTab="{{activeTab}}" swipeable="{{isSwipeable}}" hasSubTitle="{{true}}"
+      tabContentHeight="{{activeTab === 0 ? '150px' : activeTab === 2 ? '200px' : '50vh'}}"
+      tabBarBackgroundColor="#0000" tabBarUnderlineHeight="3px" tabBarUnderlineWidth="31px" tabBarUnderlineColor="white"
+      tabBarActiveTextColor="white" stickyBar="{{true}}">
       <block tiki:for="{{tabs}}" tiki:if="{{!isSwipeable}}">
         <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" tiki:if="{{index === 0}}">
           <view class="tab-content">
             <view class="bid-product" tiki:if="{{!isLoading}}">
-              <bid-item product="{{bidProduct}}" isLoading="{{isLoading}}"/>
+              <bid-item product="{{bidProduct}}" isLoading="{{isLoading}}" />
             </view>
           </view>
         </tab-content>
         <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" tiki:elif="{{index === 1}}">
-          <view class="tab-content" style="height: 1200px; width: 100%;">
-            Tab 2 height 1200
-            <view class="tab-content">content of {{item.title}}</view>
+          <view class="tab-content" tiki:if="{{!isLoading}}" tiki:for="{{stalkProducts}}">
+              <stalk-item propsItem="{{item}}" isLoading="{{isLoading}}" />
           </view>
         </tab-content>
       </block>

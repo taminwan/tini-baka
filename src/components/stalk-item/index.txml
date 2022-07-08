@@ -1,0 +1,37 @@
+<view>
+  <view tiki:if="{{isLoading}}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small" />
+    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small" />
+    <view class="skeleton skeleton-font-medium skeleton-100-width" />
+  </view>
+  <view tiki:else>
+    <text class="bid-item-title" number-of-lines="{{1}}">
+      {{propsItem.seller.name}}
+    </text>
+    <text class="bid-item-title" number-of-lines="{{1}}">
+      {{propsItem.seller.time}}
+    </text>
+    <text class="bid-item-title" number-of-lines="{{1}}">
+      {{propsItem.from}}
+    </text>
+    <image src="{{propsItem.thumbnail}}" />
+    <text class="bid-item-title" number-of-lines="{{3}}">
+      {{propsItem.name}}
+    </text>
+    <view>
+      <text class="bid-item-title" number-of-lines="{{1}}">
+        {{propsItem.title}}
+      </text>
+      <text class="bid-item-title" number-of-lines="{{1}}">
+        {{propsItem.no_bidding_counter}}
+      </text>
+    </view>
+    <view tiki:if="{{propsItem.isAllowToBid}}">
+      <view class="blue__button">
+        <text class="text" number-of-lines="{{ 1 }}">
+          Bid lun!
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
