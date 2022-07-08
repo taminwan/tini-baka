@@ -31,14 +31,14 @@
       { 
         "name": "Kho của tui", 
         "pagePath": "pages/warehouse/index",
-        "icon": "images/ic_book.svg",
-        "activeIcon": "images/ic_book_active.svg"
+        "icon": "images/ic_book.png",
+        "activeIcon": "images/ic_book_active.png"
       },
       { 
         "name": "Tui", 
         "pagePath": "pages/me/index",
-        "icon": "images/ic_me.svg",
-        "activeIcon": "images/ic_me_active.svg"
+        "icon": "images/ic_me.png",
+        "activeIcon": "images/ic_me_active.png"
       }
     ]
   }
