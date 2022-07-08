@@ -1,0 +1,25 @@
+<view class="product">
+  <view tiki:if="{{isLoading}}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"/>
+    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"/>
+    <view class="skeleton skeleton-font-medium skeleton-100-width"/>
+  </view>
+  <view
+    tiki:else
+    catchTap="_onUserRankingClick"
+  >
+    <avatar src="{{userRankingInfo.avatar}}"/>
+    <text
+      class="bid-item-title"
+      number-of-lines="{{3}}"
+    >
+      {{userRankingInfo.name}}
+    </text>
+    <text
+      class="bid-item-title"
+      number-of-lines="{{3}}"
+    >
+      {{userRankingInfo.price}}
+    </text>
+  </view>
+</view>

@@ -6,5 +6,13 @@
     <view class="bid-product" tiki:if="{{!isLoading}}">
       <bid-item product="{{bidProduct}}" isLoading="{{isLoading}}" />
     </view>
+
+    <view tiki:for="{{rankingList}}">
+      <user-ranking userRankingInfo="{{item}}" isLoading="{{isLoading}}" />
+    </view>
+
+    <view tiki:if="{{!isLoading}}">
+      <text>{{productIntro.data}}</text>
+    </view>
   </view>
 </view>

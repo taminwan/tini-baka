@@ -28,31 +28,31 @@ export const getRankingList = () => {
   return fakeRequest([
     {
       name:"tung.tran",
-      avatar:"",
+      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
       price: "3.313,45",
       icStatus: ""
     },
     {
       name:"van.vuk",
-      avatar:"",
+      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
       price: "313,12",
       icStatus: ""
     },
     {
       name:"sonbui",
-      avatar:"",
+      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
       price: "31",
       icStatus: ""
     },
     {
       name:"Minwan",
-      avatar:"",
+      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
       price: "3",
       icStatus: ""
     },
     {
       name:"tinhhuynh",
-      avatar:"",
+      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
       price: "0,5",
       icStatus: ""
     }

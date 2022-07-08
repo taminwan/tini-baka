@@ -7,7 +7,7 @@ export const request = async ({ path }) => {
 };
 
 export const fakeRequest = async (res) => {
-  await delay(600);
+  await delay(200);
   return res;
 };
 

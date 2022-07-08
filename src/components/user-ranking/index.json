@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "avatar": "@tiki.vn/tini-ui/es/avatar/index"
+  }
+}
