@@ -34,6 +34,7 @@
           <stalk-item
             propsItem="{{ item }}"
             isLoading="{{ isLoading }}"
+            onBidClick="navigateToRanking"
           ></stalk-item>
         </block>
       </view>

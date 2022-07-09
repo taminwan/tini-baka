@@ -2,7 +2,8 @@
   {
     "seller": {
       "name": "BAKA Official",
-      "time": "3 Tháng 7, 2022 - 13:24 "
+      "time": "3 Tháng 7, 2022 - 13:24 ",
+      "avatar": "/images/baka_avatar.png"
     },
     "from": "Góc BID",
     "content": "Chú Thuật chưa bao giờ hết hot",
@@ -14,7 +15,8 @@
   {
     "seller": {
       "name": "user.name123",
-      "time": "3 March, 2022 at 13:24 "
+      "time": "3 March, 2022 at 13:24 ",
+      "avatar": "https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png"
     },
     "from": "Góc review",
     "content": "Đã đọc rồi thì không dứt ra được nha",

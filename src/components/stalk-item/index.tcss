@@ -1,0 +1,141 @@
+.stalk__item {
+  background: rgba(196, 196, 196, 0.08);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.stalk__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stalk__header .icon {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  margin-right: 24px;
+}
+
+.stalk__header .name {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+.stalk__header .time {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+}
+
+.stalk__body .tag {
+  background: rgba(88, 255, 225, 0.36);
+  border-radius: 13px;
+  display: inline-block;
+  padding: 4px 6px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #3affdb;
+  margin-bottom: 6px;
+}
+
+.stalk__body .tag.red {
+  background: rgba(255, 88, 88, 0.36);
+  color: #ff7070;
+}
+
+.stalk__body .comment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  margin-bottom: 16px;
+  width: 100%;
+  display: block;
+}
+.stalk__body .img__wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.stalk__body .img {
+  width: 100%;
+  max-width: 100%;
+}
+.stalk__body .title {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.stalk__body {
+  margin-bottom: 24px;
+}
+
+.stalk__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.stalk__actions .number {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #00fabe;
+  margin-right: 5px;
+}
+
+.stalk__actions .text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stalk__actions .cta {
+  background: linear-gradient(236.29deg, #58ffe1 -42.07%, #1369e9 80.95%);
+  border-radius: 30px !important;
+  border: none;
+  padding-left: 22px !important;
+  padding-right: 22px !important;
+}
+
+.stalk__footer {
+  background: rgba(101, 91, 103, 0.12);
+  border-radius: 0px 0px 6px 6px;
+  display: flex;
+  align-items: center;
+  margin-bottom: -16px;
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
+.stalk__footer .footer__item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.stalk__footer .footer__item .icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.stalk__footer .footer__item .text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+}

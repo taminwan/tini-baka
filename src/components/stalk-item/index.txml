@@ -1,36 +1,63 @@
-<view>
-  <view tiki:if="{{isLoading}}">
-    <view class="skeleton product-image-skeleton radius-8px mb-2x-small" />
-    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small" />
-    <view class="skeleton skeleton-font-medium skeleton-100-width" />
+<view class="stalk__item">
+  <view tiki:if="{{ isLoading }}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"></view>
+    <view
+      class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"
+    ></view>
+    <view class="skeleton skeleton-font-medium skeleton-100-width"></view>
   </view>
   <view tiki:else>
-    <text class="bid-item-title" number-of-lines="{{1}}">
-      {{propsItem.seller.name}}
-    </text>
-    <text class="bid-item-title" number-of-lines="{{1}}">
-      {{propsItem.seller.time}}
-    </text>
-    <text class="bid-item-title" number-of-lines="{{1}}">
-      {{propsItem.from}}
-    </text>
-    <image src="{{propsItem.thumbnail}}" />
-    <text class="bid-item-title" number-of-lines="{{3}}">
-      {{propsItem.name}}
-    </text>
-    <view>
-      <text class="bid-item-title" number-of-lines="{{1}}">
-        {{propsItem.title}}
-      </text>
-      <text class="bid-item-title" number-of-lines="{{1}}">
-        {{propsItem.no_bidding_counter}}
-      </text>
-    </view>
-    <view tiki:if="{{propsItem.isAllowToBid}}">
-      <view class="blue__button">
-        <text class="text" number-of-lines="{{ 1 }}">
-          Bid lun!
+    <view class="stalk__content">
+      <view class="stalk__header">
+        <image
+          class="icon"
+          src="{{ propsItem.seller.avatar }}"
+          mode="widthFix"
+        ></image>
+        <view class="info">
+          <text class="name">
+            {{ propsItem.seller.name }}
+          </text>
+          <text class="time" number-of-lines="{{ 1 }}">
+            {{ propsItem.seller.time }}
+          </text>
+        </view>
+      </view>
+
+      <view class="stalk__body">
+        <text class="tag {{ propsItem.from === 'Góc BID' ? 'red' : '' }}">
+          {{ propsItem.from }}
         </text>
+        <text class="comment">
+          {{ propsItem.content }}
+        </text>
+        <view class="img__wrapper">
+          <image class="img" src="{{ propsItem.thumbnail }}"></image>
+        </view>
+        <text class="title">
+          {{ propsItem.title }}
+        </text>
+      </view>
+
+      <view class="stalk__actions" tiki:if="{{ propsItem.isAllowToBid }}">
+        <view class="people">
+          <text class="number">
+            {{ propsItem.no_bidding_counter }}
+          </text>
+          <text class="text"> người đang bid </text>
+        </view>
+        <button class="cta" onTap="_onBidClick">Bid lun!</button>
+      </view>
+
+      <view class="stalk__footer">
+        <view class="footer__left footer__item" onTap="_onWowClick">
+          <image class="icon" src="/images/ic_wow.png"></image>
+          <text class="text"> Wow! (123) </text>
+        </view>
+        <view class="footer__right footer__item" onTap="_onCommentClick">
+          <image class="icon" src="/images/ic_comment.png"></image>
+          <text class="text"> Bình luận (12) </text>
+        </view>
       </view>
     </view>
   </view>
