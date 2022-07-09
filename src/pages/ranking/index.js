@@ -5,6 +5,8 @@ import {
   getRankingListOfWinner,
 } from "../../services/index";
 
+const appConst = getApp();
+
 Page({
   data: {
     bidProduct: {},
@@ -101,7 +103,8 @@ Page({
   },
   onConfirmBiddingClick(price) {
     console.log("BIDDING: " + price);
-
+    var audio = my.createAudioContext('audio1');
+    audio.play();
     this.loadWinnerData();
   },
   setModalState(nextModal) {

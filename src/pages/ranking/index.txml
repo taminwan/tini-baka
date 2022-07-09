@@ -116,4 +116,5 @@
       </view>
     </view>
   </modal>
+  <audio id="audio1" src="/sound/baka_audio.mp3" name="" author="Unknown" />
 </view>
