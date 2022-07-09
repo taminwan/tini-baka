@@ -3,7 +3,7 @@ App({
     userId: -1,
     userName: '',
     userAvatar: '',
-    hasRealUser: false,
+    hasUser: false,
   },
   onLaunch(options) {
     console.log('App onLaunch');

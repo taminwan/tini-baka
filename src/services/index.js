@@ -66,14 +66,17 @@ export const getRankingList = () => {
   ]);
 };
 
-export const getRankingListOfWinner = () => {
+//"https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png"
+export const getRankingListOfWinner = (
+  userName,
+  userAvatar,
+) => {
   return fakeRequest([
     {
-      name: "YOU-ARE-HERE",
-      avatar:
-        "https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png",
+      name: userName,
+      avatar: userAvatar,
       price: "4000",
-      icStatus: "",
+      icStatus: "1",
     },
     {
       name: "tung.tran",
