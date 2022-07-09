@@ -1,20 +1,51 @@
 <view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
 
-  <text>Giao tới</text>
-  <text>Van Vu  |  0901234567</text>
-  <text>123 Nguyễn Đình Chiểu, Phường 6, Quận 3, TP. Hồ Chi Minh</text>
+  <view class="cart__item">
+    <view tiki:if="{{ isLoading }}">
+      <view class="skeleton product-image-skeleton radius-8px mb-2x-small"></view>
+      <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"></view>
+      <view class="skeleton skeleton-font-medium skeleton-100-width"></view>
+    </view>
+    <view tiki:else>
+      <view class="cart__content">
+        <view class="cart__header">
+        </view>
 
+        <view class="cart__body">
+          <text class="title">
+            Giao tới
+          </text>
+          <text class="content">Van Vu | 0901234567</text>
+          <text class="comment">123 Nguyễn Đình Chiểu, Phường 6, Quận 3, TP. Hồ Chi Minh</text>
+        </view>
 
-  <text>Hình thức giao hàng</text>
-  <text>Giao hàng siêu tốc với Tiniship</text>
-  <text>Thời gian giao hàng dự kiến: 10/07/2022 - 15h</text>
+        <view class="cart__body">
+          <text class="title">Hình thức giao hàng</text>
+          <text class="comment">Giao hàng siêu tốc với Tiniship</text>
+          <text class="comment">Thời gian giao hàng dự kiến:
+            <text class="title">10/07/2022 - 15h</text>
+          </text>
+        </view>
 
-  <text>Hình thức thanh toán</text>
-  <text>Thanh toán với Tiki</text>
-  
-  
-  <text>Thanh toán trong 00:23:23</text>
-  <text>12.000 đ</text>
+        <view class="cart__body">
+          <text class="title">Hình thức thanh toán</text>
+          <text class="comment">Thanh toán với Tiki</text>
+        </view>
+      </view>
+    </view>
+  </view>
 
-  <button>Xác nhận</button>
+  <view class="cart__bottom">
+    <view>
+      <text style="color: #ffffffa6; margin-right: 5px;">Thanh toán trong</text>
+      <text class="number">00:23:23</text>
+    </view>
+    <view style="display: flex;">
+      <text class="price">12000đ</text>
+      <button class="cta" onTap="onTap" data-modal="{{
+          type:'image',
+          showClose:true,
+      }}">Xác nhận!</button>
+    </view>
+  </view>
 </view>
