@@ -97,14 +97,23 @@ Page({
       modal: {},
     });
 
+    console.log(e.target.dataset.item.action);
     if (e.target.dataset.item.action == "ok") {
       this.onConfirmBiddingClick(4000);
+    }
+    if (e.target.dataset.item.action == "go_cart") {
+      my.navigateTo({
+        url: "pages/warehouse/index",
+      });
     }
   },
   onConfirmBiddingClick(price) {
     var audio = my.createAudioContext("audio1");
     audio.play();
     this.loadWinnerData();
+    setTimeout(() => {
+      this.onWin();
+    }, 2000);
   },
   setModalState(nextModal) {
     const newModalState = {
@@ -125,9 +134,15 @@ Page({
     this.resetModal();
   },
   onTap(e) {
+    console.log(e.target.dataset.modal);
     this.setModalState(e.target.dataset.modal);
   },
-
+  onWin() {
+    this.setModalState({
+      type:'image2',
+      showClose:true,
+    });
+  },
   handleBack() {
     my.navigateBack();
   },

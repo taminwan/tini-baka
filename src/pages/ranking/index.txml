@@ -1,32 +1,19 @@
 <view class="wrap page__container {{ fixedHeader ? 'fix-search' : '' }}">
   <view class="top">
     <image class="header-bg" src="/images/header_bg.png"></image>
-    <button
-      shape="rounded"
-      class="header-back"
-      onTap="handleBack"
-      iconName="arrow_left"
-    ></button>
+    <button shape="rounded" class="header-back" onTap="handleBack" iconName="arrow_left"></button>
   </view>
 
   <view class="page__content">
     <view class="bid-product" tiki:if="{{ !isLoading }}">
-      <bid-item
-        product="{{ bidProduct }}"
-        isLoading="{{ isLoading }}"
-        showBid="{{ false }}"
-        className="page__bid"
-      ></bid-item>
+      <bid-item product="{{ bidProduct }}" isLoading="{{ isLoading }}" showBid="{{ false }}" className="page__bid">
+      </bid-item>
     </view>
 
     <view class="page__ranking">
       <text class="page__title"> Xếp hạng </text>
       <view class="list" tiki:for="{{ rankingList }}">
-        <user-ranking
-          userRankingInfo="{{ item }}"
-          index="{{ index + 1 }}"
-          isLoading="{{ isLoading }}"
-        ></user-ranking>
+        <user-ranking userRankingInfo="{{ item }}" index="{{ index + 1 }}" isLoading="{{ isLoading }}"></user-ranking>
       </view>
     </view>
 
@@ -58,28 +45,17 @@
       <image class="img" src="/images/ic_astra.png"></image>
       <input class="input" value="4000" />
     </view>
-    <button
-      class="page__action"
-      onTap="onTap"
-      data-modal="{{
+    <button class="page__action" onTap="onTap" data-modal="{{
           type:'image',
           showClose:true,
-      }}"
-    >
+      }}">
       Bid lun!
     </button>
   </view>
 
-  <modal
-    show="{{ modal.type === 'image' }}"
-    onModalClose="resetModal"
-    onMaskClick="onMaskClick"
-    topImage="/images/for_demo/GOT.png"
-    topImageSize="{{ modal.topImageSize }}"
-    animationType="slide"
-    buttonsLayout="vertical"
-    className="bid_modal"
-    buttons="{{
+  <modal show="{{ modal.type === 'image' }}" onModalClose="resetModal" onMaskClick="onMaskClick"
+    topImage="/images/for_demo/GOT.png" topImageSize="{{ modal.topImageSize }}" animationType="slide"
+    buttonsLayout="vertical" className="bid_modal" buttons="{{
       [
         {
           type: 'solid',
@@ -94,9 +70,7 @@
           extClass: 'bid_modal__cancel'
         }
       ]
-    }}"
-    onButtonClick="onButtonClick"
-  >
+    }}" onButtonClick="onButtonClick">
     <view slot="description">
       <text class="bid_modal__title">Ra giá</text>
 
@@ -116,5 +90,41 @@
       </view>
     </view>
   </modal>
+
+  <modal show="{{ modal.type === 'image2' }}" onModalClose="resetModal" onMaskClick="onMaskClick"
+    topImage="/images/for_demo/GOT.png" topImageSize="{{ modal.topImageSize }}" animationType="slide"
+    buttonsLayout="vertical" className="bid_modal" buttons="{{
+      [
+        {
+          type: 'solid',
+          text: 'Vào chốt đơn',
+          action: 'go_cart',
+          extClass: 'bid_modal__confirm'
+        },
+        {
+          type: 'outline',
+          text: 'Để sau',
+          action: 'cancel',
+          extClass: 'bid_modal__cancel'
+        }
+      ]
+    }}" onButtonClick="onButtonClick">
+    <view slot="description">
+
+      <text class="bid_modal__name">
+        VanVuk 
+      </text>
+      <view class="bid_modal__des">
+        đã chiến thắng
+      </view>
+
+      <view class="bid_modal__des">
+        <text>Với 12345,67 ASA</text>
+      </view>
+      <view class="bid_modal__note">
+      </view>
+    </view>
+  </modal>
+
   <audio id="audio1" class="sr-only" src="/sound/baka_audio.mp3" name="" author="Unknown" />
 </view>
