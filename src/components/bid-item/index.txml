@@ -39,7 +39,7 @@
       </view>
 
       <view class="bid__countdown">
-        <count-down deadline="{{ product.bid_seconds }}" />
+        <count-down />
       </view>
       <view class="bid__new">
         {{ product.latest_bidding_name }} vừa bid 

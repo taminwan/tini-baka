@@ -1,15 +1,15 @@
 <view class="count_down {{`${className}`}}">
   <view class="count_down__content">
     <view class="count_down__item">
-      <view class="count_down__inner"> 00 </view>
+      <view class="count_down__inner"> {{ hours }} </view>
     </view>
     <view class="count_down__divider">:</view>
     <view class="count_down__item">
-      <view class="count_down__inner"> 00 </view>
+      <view class="count_down__inner"> {{ minutes }} </view>
     </view>
     <view class="count_down__divider">:</view>
     <view class="count_down__item">
-      <view class="count_down__inner"> 34 </view>
+      <view class="count_down__inner"> {{ secs }} </view>
     </view>
   </view>
 </view>
