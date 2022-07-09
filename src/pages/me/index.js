@@ -36,6 +36,12 @@ Page({
       },
     });
   },
+
+  onButtonClick(e) {
+    this.setData({
+      modal: {},
+    });
+  },
   resetModal() {
     this.setData({
       modal: {},
