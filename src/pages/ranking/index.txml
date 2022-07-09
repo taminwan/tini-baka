@@ -2,7 +2,8 @@
   <view class="top">
     <image class="header-bg" src="/images/header_bg.png" />
   </view>
-  <view>
+
+  <view class="page__content">
     <view class="bid-product" tiki:if="{{!isLoading}}">
       <bid-item product="{{bidProduct}}" isLoading="{{isLoading}}" />
     </view>
@@ -11,8 +12,21 @@
       <user-ranking userRankingInfo="{{item}}" isLoading="{{isLoading}}" />
     </view>
 
-    <view tiki:if="{{!isLoading}}">
+    <text class="page__des" number-of-lines="{{ isShowmore ? false : 8 }}">
       <text>{{productIntro.data}}</text>
+    </text>
+    <button onTap="handleToggle" type="ghost" class="page__toggle">
+      {{ !isShowmore ? "Xem thêm..." : "Thu gọn" }}
+    </button>
+
+  </view>
+
+  <view class="page__bottom">
+    <view class="page__price">
+      <image class="img" src="/images/ic_astra.png"></image>
+      <text class="text">4000</text>
     </view>
+    <button class="page__action">Bid lun!</button>
   </view>
 </view>
+
