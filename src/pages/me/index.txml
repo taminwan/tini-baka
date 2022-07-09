@@ -4,11 +4,15 @@
     <image class="top-logo" src="/images/BAKA_LOGO.svg"></image>
   </view>
 
+  <view tiki:if={{ hasUserData }}>
+    <text>{{ userName }}</text>
+    <avatar name="Default" size="md" style="margin:8px" src="{{ userAvatar }}"/>
+  </view>
+
   <view class="me__btn" style="padding: 20px">
     <view class="me__btn" style="margin-top: 20px">
       <button onTap="getAuthCode" style="width: 100%">Get Authen Code</button>
     </view>
-
     <view class="me__content" style="margin-top: 20px">
       <textarea value="{{ code }}" style="width: 90%"></textarea>
     </view>

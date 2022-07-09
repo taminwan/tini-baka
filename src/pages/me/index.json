@@ -1,6 +1,7 @@
 {
   "transparentTitle": "always",
   "usingComponents": {
-    "button": "@tiki.vn/tini-ui/es/tu-button/index"
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "avatar": "@tiki.vn/tini-ui/es/avatar/index"
   }
 }
