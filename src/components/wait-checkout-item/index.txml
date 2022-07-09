@@ -24,7 +24,7 @@
         <view class="checkout__price">
           <text class="label"> Giá: </text>
           <text class="number">
-            {{ moneyFormatter(product.price, " ASA") }}
+            {{ moneyFormatter(product.price, " đ") }}
           </text>
         </view>
 
