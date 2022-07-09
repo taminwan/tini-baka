@@ -13,39 +13,14 @@
 
     <view class="discovery__section">
       <text class="discovery__title">
-        COMICOLA độc quyền
-      </text>
-      <scroll-view class="discovery__list" style="height: 288px;" scroll-x="{{true}}">
-        <block
-          tiki:for="{{listComicola}}"
-          tiki:key="id"
-        >
-        <view class="discovery__item ">
-          <product
-            product="{{item}}"
-            onTapProduct="onTapProduct"
-          />
-        </view>
-      </block>
-      </scroll-view>
-    </view>
-
-    <view class="discovery__section">
-      <text class="discovery__title">
         Kinh điển - ĐỌC ĐỂ không tối cổ
       </text>
       <scroll-view class="discovery__list" style="height: 288px;" scroll-x="{{true}}">
-        <block
-          tiki:for="{{listToiCo}}"
-          tiki:key="id"
-        >
-        <view class="discovery__item ">
-          <product
-            product="{{item}}"
-            onTapProduct="onTapProduct"
-          />
-        </view>
-      </block>
+        <block tiki:for="{{listToiCo}}" tiki:key="id">
+          <view class="discovery__item ">
+            <product product="{{item}}" onTapProduct="onTapProduct" />
+          </view>
+        </block>
       </scroll-view>
     </view>
 
@@ -54,20 +29,25 @@
         Full bộ không cần chờ
       </text>
       <scroll-view class="discovery__list" style="height: 288px;" scroll-x="{{true}}">
-        <block
-          tiki:for="{{listFull}}"
-          tiki:key="id"
-        >
-        <view class="discovery__item ">
-          <product
-            product="{{item}}"
-            onTapProduct="onTapProduct"
-          />
-        </view>
-      </block>
+        <block tiki:for="{{listFull}}" tiki:key="id">
+          <view class="discovery__item ">
+            <product product="{{item}}" onTapProduct="onTapProduct" />
+          </view>
+        </block>
       </scroll-view>
     </view>
 
+    <view class="discovery__section">
+      <text class="discovery__title">
+        COMICOLA độc quyền
+      </text>
+      <scroll-view class="discovery__list" style="height: 288px;" scroll-x="{{true}}">
+        <block tiki:for="{{listComicola}}" tiki:key="id">
+          <view class="discovery__item ">
+            <product product="{{item}}" onTapProduct="onTapProduct" />
+          </view>
+        </block>
+      </scroll-view>
+    </view>
   </view>
-
 </view>
