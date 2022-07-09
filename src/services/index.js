@@ -135,3 +135,27 @@ export const getStalktProducts = () => {
   ]
   );
 };
+
+export const getWarehouseWaitListing = () => {
+  return fakeRequest([
+    {
+      price: "12000",
+      thumbnail: "/images/for_demo/GOT.png",
+      title: "A Clash of Kings",
+      isAllowToBuy: true,
+      time: "",
+    }
+  ]);
+};
+
+export const getCollectionListing = () => {
+  return fakeRequest([
+    {
+      content: "Đã đọc rồi thì không dứt ra được nha",
+      thumbnail: "/images/for_demo/kung_fu.png",
+      title: "Kungfu tuyệt đỉnh đỉnh đỉnh...",
+      isAllowToBuy: false,
+      progress: "Chương 23/500"
+    }
+  ]);
+}
