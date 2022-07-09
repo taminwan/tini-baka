@@ -19,6 +19,8 @@ Page({
     this.setData({
       modal: {},
     });
+    // back to warehouse tab
+    my.navigateBack();
   },
   setModalState(nextModal) {
     const newModalState = {

@@ -1,4 +1,4 @@
-<view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
+<view class="wrap page__container {{fixedHeader ? 'fix-search' : ''}}">
 
   <view class="cart__item">
     <view tiki:if="{{ isLoading }}">
@@ -52,25 +52,19 @@
 
 
   <modal show="{{modal.type==='image'}}" onModalClose="resetModal" onMaskClick="onMaskClick"
+  className="bid_modal"
     topImage='/images/ic_success.png' topImageSize="{{modal.topImageSize}}" animationType="slide"
     buttonsLayout="vertical" buttons="{{
       [
-        {type:'outline', text: 'OK', action: 'ok'},
+        {type:'border', text: 'Kho của tui', action: 'ok', extClass: 'bid_modal__cancel'},
       ]
     }}" onButtonClick="onButtonClick">
     <view slot="header">
-      <text>Thanh toán thành công!</text>
+      <text class="bid_modal__title">Thanh toán thành công!</text>
     </view>
     <view slot="description">
-      <text>Kiểm tra hàng tại</text>
-      <view></view>
-      <text>Kho của tui</text>
-      <view></view>
+      <text class="bid_modal__name">Kiểm tra hàng tại</text>
     </view>
-    <!-- <view class="modal-content flex justify-around">
-          <button class="w-full mr-4x" data-size="md" onTap="changeImageSize">md</button>
-          <button class="w-full ml-4x" data-size="lg" onTap="changeImageSize">lg</button>
-        </view> -->
   </modal>
 
 </view>
