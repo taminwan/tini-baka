@@ -1,8 +1,11 @@
+import { getStorage } from "./utils/storage";
+import { navigate } from "./utils/navigate";
+
 App({
   data: {
     userId: -1,
-    userName: '',
-    userAvatar: '',
+    userName: "",
+    userAvatar: "",
     hasUser: false,
   },
   getUserInfo() {
@@ -18,10 +21,18 @@ App({
       },
     });
   },
+  onShow(options) {},
   onLaunch(options) {
-    console.log('App onLaunch');
     this.getUserInfo();
+    this.checkUserSuggestion();
   },
-  onShow(options) {
+
+  async checkUserSuggestion() {
+    try {
+      const userSuggest = await getStorage("user_suggest");
+      if (!userSuggest) {
+        navigate({ page: "suggestion" });
+      }
+    } catch {}
   },
 });

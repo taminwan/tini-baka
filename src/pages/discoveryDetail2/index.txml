@@ -1,0 +1,82 @@
+<view class="wrap {{ fixedHeader ? 'fix-search' : '' }}">
+  <view class="top">
+    <image class="header-bg" src="/images/header_bg.png"></image>
+    <button
+      shape="rounded"
+      class="header-back"
+      onTap="handleBack"
+      iconName="arrow_left"
+    ></button>
+  </view>
+  <view class="page__content">
+    <view class="page__img">
+      <image
+        class="img"
+        src="{{ product.thumbnail_url }}"
+        mode="widthFix"
+      ></image>
+    </view>
+
+    <view class="page__numbers">
+      <view class="page__number">
+        <text class="label"> Lượt tải:</text>
+        <text class="number">47.35K</text>
+      </view>
+      <view class="page__number">
+        <text class="label"> Thích:</text>
+        <text class="number">4.1k</text>
+      </view>
+    </view>
+    <text class="page__name">Cleaner K - Kẻ Dọn Dẹp K</text>
+
+    <view class="page__infos">
+      <view class="page__info">
+        <text class="label"> Tác Giả:</text>
+        <text class="value">Shin Jin Woo</text>
+      </view>
+      <view class="page__info">
+        <text class="label"> Hoạ Sĩ:</text>
+        <text class="value">Hong Soon Sik</text>
+      </view>
+      <view class="page__info">
+        <text class="label"> Thể Loại:</text>
+        <text class="value">Hành Động</text>
+      </view>
+    </view>
+    <text class="page__des" number-of-lines="{{ isShowmore ? false : 3 }}">
+      {{ product.descrition }}
+    </text>
+    <button onTap="handleToggle" type="ghost" class="page__toggle">
+      {{ !isShowmore ? "Xem thêm..." : "Thu gọn" }}
+    </button>
+
+    <view class="page__chapters">
+      <view class="chapter__title">
+        <text class="text"> Chương</text>
+        <text class="text active"> 123</text>
+        <text class="text"> / 500</text>
+      </view>
+
+      <block tiki:for="{{ product.chapters }}" tiki:key="id">
+        <view class="page__chapter">
+          <image
+            class="chapter__img"
+            src="{{ item.img }}"
+            mode="widthFix"
+          ></image>
+          <view class="chapter__info">
+            <view class="chapter__left">
+              <view class="chapter__index">
+                {{ item.index }}
+              </view>
+              <view class="chapter__name"> {{ item.title }}</view>
+            </view>
+            <view class="chapter__right">
+              <view class="chapter__date"> {{ item.date }} </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

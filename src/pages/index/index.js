@@ -57,9 +57,7 @@ Page({
     });
   },
 
-  onLoad(query) {},
   onReady() {
     this.loadData();
   },
-
 });

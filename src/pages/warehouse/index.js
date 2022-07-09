@@ -46,7 +46,7 @@ Page({
 
   navigateToDetail(product) {
     navigate({
-      page: "discoveryDetail",
+      page: "discoveryDetail2",
       params: {
         id: product.id,
       },

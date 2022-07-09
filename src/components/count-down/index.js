@@ -8,33 +8,28 @@ Component({
     minutes: 0,
     secs: 0,
   },
-  interval: null,
   didMount() {
-    if (!this.props.deadline) {
-      return;
-    }
-    if (this.interval) {
-      clearInterval(this.interval);
-    }
-    const self = this;
-    const deadline = new Date(this.props.deadline).getTime();
-    const now = new Date().getTime();
-    const countdownDuration = deadline - now;
-    const hours = Math.floor(
-      (countdownDuration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor(
-      (countdownDuration % (1000 * 60 * 60)) / (1000 * 60)
-    );
-    const secs = Math.floor((countdownDuration % (1000 * 60)) / 1000);
+    this.initCount();
+  },
+  didUnmount() {
+    clearInterval(this.interval);
+  },
 
-    this.setData({
-      hours,
-      minutes,
-      secs,
-    });
+  methods: {
+    interval: null,
+    onClear() {
+      this.props.onClear();
+    },
 
-    this.interval = setInterval(() => {
+    initCount() {
+      if (!this.props.deadline) {
+        return;
+      }
+      if (this.interval) {
+        clearInterval(this.interval);
+      }
+      const self = this;
+      const deadline = new Date(this.props.deadline).getTime();
       const now = new Date().getTime();
       const countdownDuration = deadline - now;
       const hours = Math.floor(
@@ -44,20 +39,29 @@ Component({
         (countdownDuration % (1000 * 60 * 60)) / (1000 * 60)
       );
       const secs = Math.floor((countdownDuration % (1000 * 60)) / 1000);
-      self.setData({
+
+      this.setData({
         hours,
         minutes,
         secs,
       });
-    }, 1000);
-  },
-  didUnmount() {
-    clearInterval(this.interval);
-  },
 
-  methods: {
-    onClear() {
-      this.props.onClear();
+      this.interval = setInterval(() => {
+        const now = new Date().getTime();
+        const countdownDuration = deadline - now;
+        const hours = Math.floor(
+          (countdownDuration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (countdownDuration % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const secs = Math.floor((countdownDuration % (1000 * 60)) / 1000);
+        self.setData({
+          hours,
+          minutes,
+          secs,
+        });
+      }, 1000);
     },
   },
 });

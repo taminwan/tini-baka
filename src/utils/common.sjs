@@ -42,3 +42,7 @@ export const statusFormatter = (status) => {
   }
   return statusFormat;
 };
+
+export const containsInlist = (item, list) => {
+  return list.indexOf(item) !== -1;
+};

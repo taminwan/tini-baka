@@ -1,3 +1,6 @@
+import { setStorage } from "../../utils/storage";
+import { switchTab } from "../../utils/navigate";
+
 const app = getApp();
 
 Page({
@@ -61,5 +64,11 @@ Page({
     var audio = my.createAudioContext("audio1");
     audio.play();
     this.setModalState(e.target.dataset.modal);
+  },
+  clearData() {
+    setStorage("user_suggest", "");
+    switchTab({
+      page: "index",
+    });
   },
 });

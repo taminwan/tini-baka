@@ -1,0 +1,31 @@
+<import-sjs from="../../utils/common.sjs" name="{containsInlist}"> </import-sjs>
+
+<view class="wrap {{ fixedHeader ? 'fix-search' : '' }}">
+  <view class="top">
+    <image class="header-bg" src="/images/header_bg.png"></image>
+    <image class="top-logo" src="/images/BAKA_LOGO.svg"></image>
+  </view>
+  <view class="page__content">
+    <text class="page__title"> Bạn muốn xem gì nào? </text>
+    <view class="page__list">
+      <block tiki:for="{{ list }}">
+        <view
+          class="page__item {{
+            containsInlist(item, selected) ? 'active' : ''
+          }}"
+          onTap="onSelected"
+          data-suggest="{{ item: item }}"
+        >
+          <text class="page__text"> {{ item }} </text>
+        </view>
+      </block>
+    </view>
+    <button
+      class="page__action"
+      disabled="{{ !selected.length }}"
+      onTap="toHome"
+    >
+      Đã chọn xong
+    </button>
+  </view>
+</view>

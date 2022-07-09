@@ -50,6 +50,14 @@
         <icon class="icon" type="arrow_right" color="#ffffff"></icon>
       </view>
     </view>
+    <view class="me__item" onTap="clearData">
+      <view class="left">
+        <text class="label"> Xóa dữ liệu ?</text>
+      </view>
+      <view class="right">
+        <icon class="icon" type="arrow_right" color="#ffffff"></icon>
+      </view>
+    </view>
 
   </view>
 

@@ -6,7 +6,9 @@
     "pages/me/index",
     "pages/ranking/index",
     "pages/discoveryDetail/index",
-    "pages/cart/index"
+    "pages/discoveryDetail2/index",
+    "pages/cart/index",
+    "pages/suggestion/index"
   ],
   "window": {
     "defaultTitle": "",
