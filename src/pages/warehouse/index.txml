@@ -1,1 +1,26 @@
-<view>Warehouse main page</view>
+<view class="wrap {{ fixedHeader ? 'fix-search' : '' }}">
+  <view class="top">
+    <image class="header-bg" src="/images/header_bg.png"></image>
+    <image class="top-logo" src="/images/BAKA_LOGO.svg"></image>
+  </view>
+
+
+  <view class="page__content">
+
+    <text class="warehouse__title">
+      Chờ chốt
+    </text>
+    <view tiki:for="{{waitProducts}}">
+      <wait-checkout-item product="{{item}}" isLoading="{{isLoading}}" />
+    </view>
+
+    <text class="warehouse__title">
+      Kho tàng 123
+    </text>
+    <view tiki:for="{{rankingList}}">
+      <!-- <user-ranking userRankingInfo="{{item}}" isLoading="{{isLoading}}" /> -->
+    </view>
+
+  </view>
+
+</view>

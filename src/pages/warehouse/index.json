@@ -1,3 +1,6 @@
 {
-  "transparentTitle": "always"
+  "transparentTitle": "always",
+  "usingComponents": {
+    "wait-checkout-item": "components/wait-checkout-item/index"
+  }
 }
