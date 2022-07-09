@@ -59,6 +59,47 @@ export const getRankingList = () => {
   ]);
 };
 
+export const getRankingListOfWinner= () => {
+  return fakeRequest([
+    {
+      name:"YOU-ARE-HERE",
+      avatar:"https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png",
+      price: "4000",
+      icStatus: ""
+    },
+    {
+      name:"tung.tran",
+      avatar:"https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
+      price: "3.313,45",
+      icStatus: ""
+    },
+    {
+      name:"van.vuk",
+      avatar:"https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png",
+      price: "313,12",
+      icStatus: ""
+    },
+    {
+      name:"sonbui",
+      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
+      price: "31",
+      icStatus: ""
+    },
+    {
+      name:"Minwan",
+      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
+      price: "3",
+      icStatus: ""
+    },
+    {
+      name:"tinhhuynh",
+      avatar:"https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
+      price: "0,5",
+      icStatus: ""
+    }
+  ]);
+};
+
 export const getBiddingProductIntro = () => {
   return fakeRequest({
     data: "Tác Giả: Shin Jin Woo\nHoạ Sĩ: Hong Soon Sik\nThể Loại: Hành Động\n'Ở Hàn Quốc này, kẻ mạnh chính là luật. Có tiền thì vô tội, không tiền thì có tội'\n'Ở Hàn Quốc này, kẻ mạnh chính là luật. Có tiền thì vô tội, không tiền thì có tội'.\nCon gái của Kim Jin bị người ta bạo hành tập thể dẫn đến mất khả năng làm mẹ, nhưng những kẻ gây tội lại được tại ngoại vì có bố mẹ ..."

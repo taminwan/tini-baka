@@ -1,4 +1,4 @@
-import { getBiddingProductDetails, getRankingList, getBiddingProductIntro } from '../../services/index';
+import { getBiddingProductDetails, getRankingList, getBiddingProductIntro, getRankingListOfWinner } from '../../services/index';
 
 Page({
   data: {
@@ -29,6 +29,27 @@ Page({
         bidProduct: bid_product,
         rankingList: ranking_list,
         productIntro: product_intro,
+        isLoading: false
+      });
+    } catch (error) {
+      console.log('Error: ', error)
+      this.setData({
+        isLoading: false,
+      });
+    }
+  },
+
+
+  async loadWinnerData() {
+    try {
+      const [ranking_list] = await Promise.all([
+        getRankingListOfWinner()
+      ]);
+  
+      console.log('Winner ranking reponse: ', ranking_list);
+  
+      this.setData({
+        rankingList: ranking_list,
         isLoading: false
       });
     } catch (error) {
@@ -71,6 +92,8 @@ Page({
   },
   onConfirmBiddingClick(price) {
     console.log("BIDDING: " + price)
+
+    this.loadWinnerData()
   }, 
   setModalState(nextModal) {
     const newModalState = {
