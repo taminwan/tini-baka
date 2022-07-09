@@ -1,4 +1,8 @@
-import { getCollectionListing, getWarehouseWaitListing  } from '../../services/index';
+import {
+  getCollectionListing,
+  getWarehouseWaitListing,
+} from "../../services/index";
+import { navigate } from "../../utils/navigate";
 
 Page({
   data: {
@@ -15,19 +19,19 @@ Page({
     try {
       const [wait_products, collection_products] = await Promise.all([
         getWarehouseWaitListing(),
-        getCollectionListing()
+        getCollectionListing(),
       ]);
 
-      console.log('Wait products reponse: ', wait_products)
-      console.log('Collection reponse: ', collection_products)
+      console.log("Wait products reponse: ", wait_products);
+      console.log("Collection reponse: ", collection_products);
 
       this.setData({
         waitProducts: wait_products,
         collectionProducts: collection_products,
-        isLoading: false
+        isLoading: false,
       });
     } catch (error) {
-      console.log('Error: ', error)
+      console.log("Error: ", error);
       this.setData({
         isLoading: false,
       });
@@ -35,20 +39,25 @@ Page({
   },
 
   navigateToCart() {
-    my.navigateTo({
-      url: 'pages/cart/index',
+    navigate({
+      page: "cart",
     });
   },
 
-	onLoad(query) {
-	},
-	onReady() {
-    this.loadData()
-	},
-	onShow() {
-	},
-	onHide() {
-	},
-	onUnload() {
-	}
+  navigateToDetail(product) {
+    navigate({
+      page: "discoveryDetail",
+      params: {
+        id: product.id,
+      },
+    });
+  },
+
+  onLoad(query) {},
+  onReady() {
+    this.loadData();
+  },
+  onShow() {},
+  onHide() {},
+  onUnload() {},
 });

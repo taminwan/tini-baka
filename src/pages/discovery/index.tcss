@@ -22,18 +22,21 @@
 
 .discovery__list {
   display: flex;
+  width: 100%;
 }
 
 .discovery__list::-webkit-scrollbar {
   display: none;
 }
 .discovery__item {
-  width: 40%;
-  min-width: 40%;
+  width: 145px;
+  min-width: 145px;
   margin-right: 18px;
   height: 288px;
 }
 
 .discovery__section {
   margin-bottom: 32px;
+  max-width: 100%;
+  overflow: hidden;
 }

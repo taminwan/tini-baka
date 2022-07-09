@@ -1,64 +1,96 @@
-<view class="wrap page__container {{fixedHeader ? 'fix-search' : ''}}">
+<view class="wrap page__container {{ fixedHeader ? 'fix-search' : '' }}">
+  <view class="top">
+    <image class="header-bg" src="/images/header_bg.png"></image>
+    <button
+      shape="rounded"
+      class="header-back"
+      onTap="handleBack"
+      iconName="arrow_left"
+    ></button>
+  </view>
 
-  <view class="cart__item">
-    <view tiki:if="{{ isLoading }}">
-      <view class="skeleton product-image-skeleton radius-8px mb-2x-small"></view>
-      <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"></view>
-      <view class="skeleton skeleton-font-medium skeleton-100-width"></view>
+  <view class="cart__container">
+    <view class="cart__item">
+      <view tiki:if="{{ isLoading }}">
+        <view
+          class="skeleton product-image-skeleton radius-8px mb-2x-small"
+        ></view>
+        <view
+          class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"
+        ></view>
+        <view class="skeleton skeleton-font-medium skeleton-100-width"></view>
+      </view>
+      <view tiki:else>
+        <view class="cart__content">
+          <view class="cart__body">
+            <text class="title"> Giao tới </text>
+            <text class="content">Van Vu | 0901234567</text>
+            <text class="comment"
+              >123 Nguyễn Đình Chiểu, Phường 6, Quận 3, TP. Hồ Chi Minh</text
+            >
+          </view>
+
+          <view class="cart__body">
+            <text class="title">Hình thức giao hàng</text>
+            <text class="comment">Giao hàng siêu tốc với Tiniship</text>
+            <text class="comment"
+              >Thời gian giao hàng dự kiến:
+              <text class="title">10/07/2022 - 15h</text>
+            </text>
+          </view>
+
+          <view class="cart__body">
+            <text class="title">Hình thức thanh toán</text>
+            <text class="comment">Thanh toán với Tiki</text>
+          </view>
+        </view>
+      </view>
     </view>
-    <view tiki:else>
-      <view class="cart__content">
-        <view class="cart__header">
-        </view>
 
-        <view class="cart__body">
-          <text class="title">
-            Giao tới
-          </text>
-          <text class="content">Van Vu | 0901234567</text>
-          <text class="comment">123 Nguyễn Đình Chiểu, Phường 6, Quận 3, TP. Hồ Chi Minh</text>
-        </view>
-
-        <view class="cart__body">
-          <text class="title">Hình thức giao hàng</text>
-          <text class="comment">Giao hàng siêu tốc với Tiniship</text>
-          <text class="comment">Thời gian giao hàng dự kiến:
-            <text class="title">10/07/2022 - 15h</text>
-          </text>
-        </view>
-
-        <view class="cart__body">
-          <text class="title">Hình thức thanh toán</text>
-          <text class="comment">Thanh toán với Tiki</text>
-        </view>
+    <view class="cart__bottom">
+      <view>
+        <text style="color: #ffffffa6; margin-right: 5px"
+          >Thanh toán trong</text
+        >
+        <text class="number">00:23:23</text>
+      </view>
+      <view style="display: flex">
+        <text class="price">12000đ</text>
+        <button
+          class="cta"
+          onTap="onTap"
+          data-modal="{{
+          type:'image',
+          showClose:true,
+      }}"
+        >
+          Xác nhận!
+        </button>
       </view>
     </view>
   </view>
 
-  <view class="cart__bottom">
-    <view>
-      <text style="color: #ffffffa6; margin-right: 5px;">Thanh toán trong</text>
-      <text class="number">00:23:23</text>
-    </view>
-    <view style="display: flex;">
-      <text class="price">12000đ</text>
-      <button class="cta" onTap="onTap" data-modal="{{
-          type:'image',
-          showClose:true,
-      }}">Xác nhận!</button>
-    </view>
-  </view>
-
-
-
-  <modal show="{{modal.type==='image'}}" onModalClose="resetModal" onMaskClick="onMaskClick"
-  className="bid_modal"
-    topImage='/images/ic_success.png' topImageSize="{{modal.topImageSize}}" animationType="slide"
-    buttonsLayout="vertical" buttons="{{
+  <modal
+    show="{{ modal.type === 'image' }}"
+    onModalClose="resetModal"
+    onMaskClick="onMaskClick"
+    className="bid_modal"
+    topImage="/images/ic_success.png"
+    topImageSize="{{ modal.topImageSize }}"
+    animationType="slide"
+    buttonsLayout="vertical"
+    buttons="{{
       [
-        {type:'border', text: 'Kho của tui', action: 'ok', extClass: 'bid_modal__cancel'},
+        {
+          type: 'border',
+          text: 'Kho của tui',
+          action: 'ok',
+          extClass: 'bid_modal__cancel'
+        }
       ]
-    }}" onButtonClick="onButtonClick">
+    }}"
+    onButtonClick="onButtonClick"
+  >
     <view slot="header">
       <text class="bid_modal__title">Thanh toán thành công!</text>
     </view>
@@ -66,5 +98,4 @@
       <text class="bid_modal__name">Kiểm tra hàng tại</text>
     </view>
   </modal>
-
 </view>

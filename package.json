@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "tiki": {
     "appIdentifier": "vn.tiki.miniapp.baka",
-    "buildNumber": 17
+    "buildNumber": 18
   },
   "dependencies": {
     "@tiki.vn/tini-ui": "^0.12.0",

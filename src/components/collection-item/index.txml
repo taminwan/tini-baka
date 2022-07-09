@@ -1,19 +1,40 @@
-<view class="product">
-  <view tiki:if="{{isLoading}}">
-    <view class="skeleton product-image-skeleton radius-8px mb-2x-small" />
-    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small" />
-    <view class="skeleton skeleton-font-medium skeleton-100-width" />
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<view class="collection__item">
+  <view tiki:if="{{ isLoading }}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"></view>
+    <view
+      class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"
+    ></view>
+    <view class="skeleton skeleton-font-medium skeleton-100-width"></view>
   </view>
-  <view tiki:else catchTap="_onCollectionProductClick">
-    <image src="{{product.thumbnail}}" />
-    <text class="bid-item-title" number-of-lines="{{3}}">
-      {{product.title}}
-    </text>
-    <text class="bid-item-title" number-of-lines="{{3}}">
-      {{product.content}}
-    </text>
-    <text class="bid-item-title" number-of-lines="{{3}}">
-      {{product.progress}}
-    </text>
+  <view tiki:else>
+    <view class="collection__content" onTap="_onCollectionProductClick">
+      <view class="collection__left">
+        <image
+          class="collection__img"
+          src="{{ product.thumbnail }}"
+          mode="widthFix"
+        ></image>
+      </view>
+      <view class="collection__right">
+        <text class="collection__title" number-of-lines="{{ 2 }}">
+          {{ product.title }}
+        </text>
+        <view class="collection__countdown">
+          <text class="label"> Chương </text>
+          <text class="active"> {{ product.progress }} </text>
+          <text class="label"> /500 </text>
+          <progress
+            percent="{{ product.progress }}"
+            active-color="#3391FF"
+            background-color="rgba(196, 196, 196, 0.1)"
+          ></progress>
+        </view>
+        <text class="collection__note">
+          Đã tải về với {{ moneyFormatter(product.price, " ASA") }}
+        </text>
+      </view>
+    </view>
   </view>
 </view>

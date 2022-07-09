@@ -4,19 +4,26 @@
     <image class="top-logo" src="/images/BAKA_LOGO.svg"></image>
   </view>
 
-  <view class="page__content">
-    <text class="warehouse__title">
-      Chờ chốt
-    </text>
-    <view tiki:for="{{waitProducts}}">
-      <wait-checkout-item product="{{item}}" isLoading="{{isLoading}}" onWaitProductClick="navigateToCart"/>
+  <view class="warehouse__content">
+    <view class="warehouse__section"> 
+      <text class="warehouse__title">
+        Chờ chốt
+      </text>
+      <view tiki:for="{{waitProducts}}">
+        <view class="warehouse__item"> 
+          <wait-checkout-item product="{{item}}" isLoading="{{isLoading}}" onWaitProductClick="navigateToCart"/>
+        </view>
+      </view>
     </view>
-
-    <text class="warehouse__title">
-      Kho tàng 123
-    </text>
-    <view tiki:for="{{collectionProducts}}">
-      <collection-item product="{{item}}" isLoading="{{isLoading}}" />
+    <view class="warehouse__section"> 
+      <text class="warehouse__title">
+        Kho tàng 123 bộ
+      </text>
+      <view tiki:for="{{collectionProducts}}">
+        <view class="warehouse__item"> 
+          <collection-item product="{{item}}" isLoading="{{isLoading}}" onCollectionProductClick="navigateToDetail" />
+        </view>
+      </view>
     </view>
   </view>
 </view>

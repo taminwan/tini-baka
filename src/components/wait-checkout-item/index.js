@@ -1,14 +1,14 @@
 Component({
-	props: {
-    className: '',
+  props: {
+    className: "",
     isLoading: false,
     product: {},
     onWaitProductClick: () => {},
   },
 
-	methods: {
+  methods: {
     _onWaitProductClick() {
       this.props.onWaitProductClick(this.props.product);
     },
-  }
+  },
 });

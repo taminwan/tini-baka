@@ -1,15 +1,8 @@
 Page({
-	onLoad(query) {
-	},
-	onReady() {
-	},
-	onShow() {
-	},
-	onHide() {
-	},
-	onUnload() {
-	},
-
+  onLoad(query) {},
+  onReady() {
+    my.hideBackHome({ hide: true });
+  },
   resetModal() {
     this.setData({
       modal: {},
@@ -42,5 +35,8 @@ Page({
   },
   onTap(e) {
     this.setModalState(e.target.dataset.modal);
+  },
+  handleBack() {
+    my.navigateBack();
   },
 });

@@ -1,16 +1,46 @@
-<view class="product">
-  <view tiki:if="{{isLoading}}">
-    <view class="skeleton product-image-skeleton radius-8px mb-2x-small" />
-    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small" />
-    <view class="skeleton skeleton-font-medium skeleton-100-width" />
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<view class="checkout__item">
+  <view tiki:if="{{ isLoading }}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"></view>
+    <view
+      class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"
+    ></view>
+    <view class="skeleton skeleton-font-medium skeleton-100-width"></view>
   </view>
-  <view tiki:else catchTap="_onWaitProductClick">
-    <image src="{{product.thumbnail}}" />
-    <text class="bid-item-title" number-of-lines="{{3}}">
-      {{product.title}}
-    </text>
-    <text class="bid-item-title" number-of-lines="{{3}}">
-      {{product.price}}
-    </text>
+  <view tiki:else>
+    <view class="checkout__content">
+      <view class="checkout__left">
+        <image
+          class="checkout__img"
+          src="{{ product.thumbnail }}"
+          mode="widthFix"
+        ></image>
+      </view>
+      <view class="checkout__right">
+        <text class="checkout__title">
+          {{ product.title }}
+        </text>
+        <view class="checkout__price">
+          <text class="label"> Giá: </text>
+          <text class="number">
+            {{ moneyFormatter(product.price, " ASA") }}
+          </text>
+        </view>
+
+        <view class="checkout__countdown">
+          <text class="label"> Thanh toán trong: </text>
+          <text class="time"> 00:23:56 </text>
+          <progress
+            percent="20"
+            active-color="#3391FF"
+            background-color="rgba(196, 196, 196, 0.1)"
+          ></progress>
+        </view>
+        <button class="checkout__btn" onTap="_onWaitProductClick">
+          Thanh toán ngay
+        </button>
+      </view>
+    </view>
   </view>
 </view>

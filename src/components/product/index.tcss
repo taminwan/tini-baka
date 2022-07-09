@@ -33,7 +33,8 @@
   background: linear-gradient(236.29deg, #58ffe1 -42.07%, #1369e9 80.95%);
   border-radius: 30px;
   color: white;
-  min-width: 60%;
+  width: 100%;
+  max-width: 120px;
   padding: 5px 13px;
   display: flex;
   justify-content: space-between;

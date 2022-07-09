@@ -183,7 +183,8 @@ export const getCollectionListing = () => {
       thumbnail: "/images/for_demo/kung_fu.png",
       title: "Kungfu tuyệt đỉnh đỉnh đỉnh...",
       isAllowToBuy: false,
-      progress: "Chương 23/500",
+      progress: 23,
+      price: 12.5,
     },
   ]);
 };
