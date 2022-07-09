@@ -138,7 +138,7 @@ export const getStalktProducts = () => {
       title: "",
       isAllowToBid: false,
       no_bidding_counter: "",
-    },
+    }
   ]);
 };
 

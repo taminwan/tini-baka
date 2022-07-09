@@ -36,7 +36,7 @@
       </text>
       <scroll-view class="discovery__list" style="height: 288px;" scroll-x="{{true}}">
         <block
-          tiki:for="{{listComicola}}"
+          tiki:for="{{listToiCo}}"
           tiki:key="id"
         >
         <view class="discovery__item ">
@@ -55,7 +55,7 @@
       </text>
       <scroll-view class="discovery__list" style="height: 288px;" scroll-x="{{true}}">
         <block
-          tiki:for="{{listComicola}}"
+          tiki:for="{{listFull}}"
           tiki:key="id"
         >
         <view class="discovery__item ">
