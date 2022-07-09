@@ -22,11 +22,13 @@
     <view class="page__content">
       <view tiki:if="{{ activeTab === 0 }}">
         <view class="bid-product" tiki:if="{{ !isLoading }}">
-          <bid-item
-            product="{{ bidProduct }}"
-            isLoading="{{ isLoading }}"
-            onBidClick="navigateToRanking"
-          ></bid-item>
+          <block tiki:for="{{ bidProduct }}">
+            <bid-item
+              product="{{ item }}"
+              isLoading="{{ isLoading }}"
+              onBidClick="navigateToRanking"
+            ></bid-item>
+          </block>
         </view>
       </view>
       <view tiki:if="{{ activeTab === 1 }}">

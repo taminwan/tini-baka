@@ -1,16 +1,28 @@
 import request, { fakeRequest } from "./request";
 
 export const getBiddingProducts = () => {
-  return fakeRequest({
-    id: 6816541,
-    name: "[Limited] A CLASH OF KINGS - tặng kèm token Iron Throne",
-    thumbnail: "/images/for_demo/GOT.png",
-    no_bidding_counter: "9.123.124",
-    bid_seconds: 24,
-    latest_bidding_name: "Sonbui Son",
-    latest_bidding_amount: "1.260",
-    isAllowToBid: true,
-  });
+  return fakeRequest([
+    {
+      id: 6816541,
+      name: "[Limited] A CLASH OF KINGS - tặng kèm token Iron Throne",
+      thumbnail: "/images/for_demo/GOT.png",
+      no_bidding_counter: "9.123.124",
+      bid_seconds: 24,
+      latest_bidding_name: "Sonbui Son",
+      latest_bidding_amount: "1.260",
+      isAllowToBid: true,
+    },
+    {
+      id: 6816542,
+      name: "[Limited] A CLASH OF KINGS - tặng kèm token Iron Throne",
+      thumbnail: "/images/for_demo/GOT.png",
+      no_bidding_counter: "9.123.124",
+      bid_seconds: 24,
+      latest_bidding_name: "Sonbui Son",
+      latest_bidding_amount: "1.260",
+      isAllowToBid: true,
+    },
+  ]);
 };
 
 export const getBiddingProductDetails = () => {
@@ -67,10 +79,7 @@ export const getRankingList = () => {
 };
 
 //"https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png"
-export const getRankingListOfWinner = (
-  userName,
-  userAvatar,
-) => {
+export const getRankingListOfWinner = (userName, userAvatar) => {
   return fakeRequest([
     {
       name: userName,

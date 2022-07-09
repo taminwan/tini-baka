@@ -1,5 +1,4 @@
-import { getBiddingProducts, getStalktProducts } from '../../services/index';
-
+import { getBiddingProducts, getStalktProducts } from "../../services/index";
 
 Page({
   data: {
@@ -8,10 +7,10 @@ Page({
     isLoading: true,
     tabs: [
       {
-        title: '⚡ Bid',
+        title: "⚡ Bid",
       },
       {
-        title: 'Hóng tin 👀',
+        title: "Hóng tin 👀",
       },
     ],
     activeTab: 0,
@@ -39,16 +38,13 @@ Page({
         getStalktProducts(),
       ]);
 
-      console.log('Bid products reponse: ', bid_product)
-      console.log('Stalk products reponse: ', stalk_products)
-
       this.setData({
         bidProduct: bid_product,
         stalkProducts: stalk_products,
         isLoading: false,
       });
     } catch (error) {
-      console.log('Error: ', error)
+      console.log("Error: ", error);
       this.setData({
         isLoading: false,
       });
@@ -57,20 +53,13 @@ Page({
 
   navigateToRanking() {
     my.navigateTo({
-      url: 'pages/ranking/index',
+      url: "pages/ranking/index",
     });
   },
 
-  onLoad(query) {
-  },
+  onLoad(query) {},
   onReady() {
-    console.log("READYYYYY")
     this.loadData();
   },
-  onShow() {
-  },
-  onHide() {
-  },
-  onUnload() {
-  }
+
 });

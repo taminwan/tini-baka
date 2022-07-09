@@ -92,7 +92,6 @@
 .page__chapters {
   margin-bottom: 100px;
   margin-top: 16px;
-
 }
 .chapter__title {
   margin-bottom: 16px;
@@ -162,7 +161,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: 2;
   background: linear-gradient(
     358.01deg,

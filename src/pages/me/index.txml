@@ -1,20 +1,59 @@
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
 <view class="wrap {{ fixedHeader ? 'fix-search' : '' }}">
   <view class="top">
     <image class="header-bg" src="/images/header_bg.png"></image>
-    <image class="top-logo" src="/images/BAKA_LOGO.svg"></image>
   </view>
+  <view class="me__container">
+    <view tiki:if="{{ hasUserData }}">
+      <view class="me__avt">
+        <avatar
+          class="img"
+          name="{{ userName }}"
+          size="md"
+          src="{{ userAvatar }}"
+        ></avatar>
+      </view>
+      <text class="me__name">{{ userName }}</text>
+      <text class="me__des">Chuyên cày tiên hiệp</text>
 
-  <view tiki:if={{ hasUserData }}>
-    <text>{{ userName }}</text>
-    <avatar name="Default" size="md" style="margin:8px" src="{{ userAvatar }}"/>
-  </view>
-
-  <view class="me__btn" style="padding: 20px">
-    <view class="me__btn" style="margin-top: 20px">
-      <button onTap="getAuthCode" style="width: 100%">Get Authen Code</button>
+      <view class="me__asa">
+        <view class="left">
+          <text class="label"> Bạn đang có</text>
+          <view class="price">
+            <image class="img" src="/images/ic_astra.png"></image>
+            <text class="text">{{ moneyFormatter(12220.34, " ASA") }} </text>
+          </view>
+        </view>
+        <view class="right">
+          <icon class="icon" type="arrow_right" color="#ffffff"></icon>
+        </view>
+      </view>
     </view>
-    <view class="me__content" style="margin-top: 20px">
-      <textarea value="{{ code }}" style="width: 90%"></textarea>
+
+    <view class="me__item">
+      <view class="left">
+        <text class="label"> Lịch sử bidding</text>
+      </view>
+      <view class="right">
+        <icon class="icon" type="arrow_right" color="#ffffff"></icon>
+      </view>
+    </view>
+    <view class="me__item">
+      <view class="left">
+        <text class="label"> Lịch sử giao dịch</text>
+      </view>
+      <view class="right">
+        <icon class="icon" type="arrow_right" color="#ffffff"></icon>
+      </view>
+    </view>
+    <view class="me__item">
+      <view class="left">
+        <text class="label"> Cần hỗ trợ ?</text>
+      </view>
+      <view class="right">
+        <icon class="icon" type="arrow_right" color="#ffffff"></icon>
+      </view>
     </view>
   </view>
 </view>
