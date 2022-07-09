@@ -18,15 +18,51 @@
     <button onTap="handleToggle" type="ghost" class="page__toggle">
       {{ !isShowmore ? "Xem thêm..." : "Thu gọn" }}
     </button>
-
   </view>
+  <modal show="{{modal.type==='basic'}}" showClose="{{modal.showClose}}" buttons="{{[{type: 'outline', text: 'Cancel'}, {text: 'OK'}]
+        }}" onModalClose="resetModal" onMaskClick="onMaskClick" onButtonClick="onButtonClick">
+    <view slot="header">
+      <text>Title</text>
+    </view>
+    <view slot="description">
+      <text>Description</text>
+    </view>
+    <view class="modal-content">
+      Swap me!!!
+    </view>
+  </modal>
+  <modal show="{{modal.type==='image'}}" onModalClose="resetModal" onMaskClick="onMaskClick"
+    topImage='/images/for_demo/GOT.png' topImageSize="{{modal.topImageSize}}" animationType="slide"
+    buttonsLayout="vertical" buttons="{{
+      [
+        {type:'solid', text: 'Xác nhận', action: 'ok'},
+        {type:'outline', text: 'Huỷ', action: 'cancel'},
+      ]
+    }}" onButtonClick="onButtonClick">
+    <view slot="header">
+      <text>Ra giá</text>
+    </view>
+    <view slot="description">
+      <text>[Limited] A CLASH OF KINGS - tặng kèm token Iron Throne</text>
+      <view></view>
+      <text>Bid từ 4000 để vào TOP</text>
+      <view></view>
+      <text>* Bạn sẽ được hoàn lại nếu không phải là người thắng cuộc</text>
+    </view>
+    <!-- <view class="modal-content flex justify-around">
+          <button class="w-full mr-4x" data-size="md" onTap="changeImageSize">md</button>
+          <button class="w-full ml-4x" data-size="lg" onTap="changeImageSize">lg</button>
+        </view> -->
+  </modal>
 
   <view class="page__bottom">
     <view class="page__price">
       <image class="img" src="/images/ic_astra.png"></image>
       <text class="text">4000</text>
     </view>
-    <button class="page__action">Bid lun!</button>
+    <button class="page__action" onTap="onTap" data-modal="{{
+          type:'image',
+          showClose:true,
+      }}">Bid lun!</button>
   </view>
 </view>
-

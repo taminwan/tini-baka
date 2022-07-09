@@ -5,6 +5,7 @@ Page({
     bidProduct: {},
     rankingList: [],
     productIntro: {},
+    modal: {},
     isLoading: true,
   },
 
@@ -48,5 +49,48 @@ Page({
 	onHide() {
 	},
 	onUnload() {
-	}
+	},
+
+  resetModal() {
+    this.setData({
+      modal: {},
+    });
+  },
+  onButtonClick(e) {
+    this.setData({
+      modal: {},
+    });
+
+    // my.alert({
+    //   content: 'item' + JSON.stringify(e.target.dataset),
+    // });
+
+    if(e.target.dataset.item.action == 'ok') {
+      this.onConfirmBiddingClick(4000)
+    }
+  },
+  onConfirmBiddingClick(price) {
+    console.log("BIDDING: " + price)
+  }, 
+  setModalState(nextModal) {
+    const newModalState = {
+      ...this.data.modal,
+      ...nextModal,
+    };
+
+    this.setData({
+      modal: newModalState,
+    });
+  },
+  changeImageSize(e) {
+    this.setModalState({
+      topImageSize: e.target.dataset.size,
+    });
+  },
+  onMaskClick() {
+    this.resetModal();
+  },
+  onTap(e) {
+    this.setModalState(e.target.dataset.modal);
+  },
 });

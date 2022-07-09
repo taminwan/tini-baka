@@ -2,6 +2,7 @@
   "transparentTitle": "always",
   "usingComponents": {
     "bid-item": "components/bid-item/index",
-    "user-ranking": "components/user-ranking/index"
+    "user-ranking": "components/user-ranking/index",
+    "modal": "@tiki.vn/tini-ui/es/modal/index"
   }
 }
