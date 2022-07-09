@@ -49,20 +49,20 @@ Page({
   async loadWinnerData() {
     try {
       const app = getApp();
-      var _userName = '';
-      var _userAvatar = '';
-      if(app.hasUserData) {
+      var _userName = "";
+      var _userAvatar = "";
+      if (app.hasUserData) {
         _userName = app.userName;
         _userAvatar = app.userAvatar;
       } else {
-        _userName = 'YOU_ARE_HERE';
-        _userAvatar = 'https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png';
+        _userName = "YOU_ARE_HERE";
+        _userAvatar =
+          "https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png";
       }
 
-      const [ranking_list] = await Promise.all([getRankingListOfWinner(
-        _userName,
-        _userAvatar
-      )]);
+      const [ranking_list] = await Promise.all([
+        getRankingListOfWinner(_userName, _userAvatar),
+      ]);
 
       console.log("Winner ranking reponse: ", ranking_list);
 
@@ -102,8 +102,7 @@ Page({
     }
   },
   onConfirmBiddingClick(price) {
-    console.log("BIDDING: " + price);
-    var audio = my.createAudioContext('audio1');
+    var audio = my.createAudioContext("audio1");
     audio.play();
     this.loadWinnerData();
   },

@@ -1,6 +1,7 @@
 .me__container {
-  margin-top: 20px;
   padding: 16px;
+  padding-top: 20px;
+  min-height: calc(100vh - 25px);
 }
 
 .me__avt {
@@ -93,6 +94,9 @@
   z-index: 3;
 }
 
+.page__container .tu-modal-content {
+  min-height: 300px;
+}
 .page__container .tu-modal {
   background: linear-gradient(
     358.01deg,
@@ -102,6 +106,10 @@
   );
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.42);
   border-radius: 30px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .bid_modal .bid_modal__price {
@@ -194,4 +202,41 @@
   font-size: 16px;
   text-decoration-line: underline;
   color: #66cdff;
+}
+
+.bid_modal .bid_modal__prize {
+  position: relative;
+  min-height: 100px;
+  margin-top: 40px;
+}
+
+.bid_modal .bid_modal__prize .prize__bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 272px;
+  height: 92px;
+  z-index: 1;
+}
+.bid_modal .bid_modal__prize .prize__text {
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.bid_modal .bid_modal__prize .prize__text .active {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 37px;
+  background: linear-gradient(104.53deg, #58ffe1 48.22%, #66cdff 60.29%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-right: 5px;
 }

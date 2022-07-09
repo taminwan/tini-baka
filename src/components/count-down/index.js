@@ -2,7 +2,7 @@ Component({
   data: {},
   props: {
     className: "",
-    deadline: "",
+    deadline: "10/07/2022 12:00:00",
   },
   methods: {
     onClear() {

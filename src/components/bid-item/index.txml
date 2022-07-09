@@ -57,7 +57,7 @@
               src="/images/ic_astra.png"
               mode="widthFix"
             ></image>
-            <input class="input" value="12.5" />
+            <input class="input" value="4000" />
           </view>
 
           <button class="bid__cta" onTap="_onBidClick">Bid lun!</button>

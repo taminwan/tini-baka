@@ -13,7 +13,7 @@
       <text class="me__name">{{ userName }}</text>
       <text class="me__des">Chuyên cày tiên hiệp</text>
 
-      <view class="me__asa">
+      <view class="me__asa" onTap="onTap" data-modal="{{ type:'image', showClose:true }}">
         <view class="left">
           <text class="label"> Bạn đang có</text>
           <view class="price">
@@ -50,14 +50,7 @@
         <icon class="icon" type="arrow_right" color="#ffffff"></icon>
       </view>
     </view>
-    <view class="me__btn" style="margin-top: 20px">
-      <button class="cta" onTap="onTap" data-modal="{{
-          type:'image',
-          showClose:true,
-      }}">
-        Redeem Asa Gift!
-      </button>
-    </view>
+
   </view>
 
 <modal show="{{ modal.type === 'image' }}" onModalClose="resetModal" onMaskClick="onMaskClick" className="bid_modal"
@@ -78,11 +71,15 @@
     <view class="bid_modal__des">
       tặng bạn
     </view>
-    <view style="position: relative;">
-      <image style="height: 150px;" src="/images/for_demo/win_bg.png"></image>
-      <text class="bid_modal__des active" style="font-size: 24px; margin-top: -120px;">12.345,67 ASA</text>
+    <view class="bid_modal__prize">
+      <image class="prize__bg" src="/images/for_demo/win_bg.png"></image>
+      <view class="prize__text" >
+       <text class="active"> 12.345,67 </text> ASA
+      </view> 
     </view>
     <view></view>
   </view>
 </modal>
+
+<audio id="audio1" class="sr-only" src="/sound/baka_audio.mp3" name="" author="Unknown" />
 </view>

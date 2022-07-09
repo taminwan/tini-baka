@@ -5,9 +5,6 @@ Page({
   onReady() {
     this.getUserInfo();
   },
-  onShow() {},
-  onHide() {},
-  onUnload() {},
   data: {
     code: "",
     userId: -1,
@@ -61,6 +58,8 @@ Page({
     this.resetModal();
   },
   onTap(e) {
+    var audio = my.createAudioContext("audio1");
+    audio.play();
     this.setModalState(e.target.dataset.modal);
   },
 });
