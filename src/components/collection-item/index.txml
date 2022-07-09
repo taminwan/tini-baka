@@ -1,0 +1,19 @@
+<view class="product">
+  <view tiki:if="{{isLoading}}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small" />
+    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small" />
+    <view class="skeleton skeleton-font-medium skeleton-100-width" />
+  </view>
+  <view tiki:else catchTap="_onCollectionProductClick">
+    <image src="{{product.thumbnail}}" />
+    <text class="bid-item-title" number-of-lines="{{3}}">
+      {{product.title}}
+    </text>
+    <text class="bid-item-title" number-of-lines="{{3}}">
+      {{product.content}}
+    </text>
+    <text class="bid-item-title" number-of-lines="{{3}}">
+      {{product.progress}}
+    </text>
+  </view>
+</view>

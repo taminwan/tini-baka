@@ -4,9 +4,7 @@
     <image class="top-logo" src="/images/BAKA_LOGO.svg"></image>
   </view>
 
-
   <view class="page__content">
-
     <text class="warehouse__title">
       Chờ chốt
     </text>
@@ -17,10 +15,8 @@
     <text class="warehouse__title">
       Kho tàng 123
     </text>
-    <view tiki:for="{{rankingList}}">
-      <!-- <user-ranking userRankingInfo="{{item}}" isLoading="{{isLoading}}" /> -->
+    <view tiki:for="{{collectionProducts}}">
+      <collection-item product="{{item}}" isLoading="{{isLoading}}" />
     </view>
-
   </view>
-
 </view>

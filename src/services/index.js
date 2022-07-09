@@ -150,6 +150,13 @@ export const getWarehouseWaitListing = () => {
       title: "A Clash of Kings",
       isAllowToBuy: true,
       time: "",
+    },
+    {
+      price: "50",
+      thumbnail: "/images/product/product_item.jpg",
+      title: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
+      isAllowToBuy: true,
+      time: "",
     }
   ]);
 };
