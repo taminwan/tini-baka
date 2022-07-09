@@ -1,14 +1,14 @@
 Component({
   props: {
-    className: '',
+    className: "",
     isLoading: false,
     product: {},
     onBidClick: () => {},
   },
 
-	methods: {
+  methods: {
     _onBidClick() {
       this.props.onBidClick(this.props.product);
     },
-  }
+  },
 });

@@ -19,12 +19,19 @@ export const navigate = ({ page, params = null }) => {
 };
 
 export const switchTab = ({ page, params = null }) => {
+  if (isPreventUserNavigate) return;
+  isPreventUserNavigate = true;
+
   my.switchTab({
     url: `${queryString.stringifyUrl({
       url: `pages/${page}/index`,
       query: params,
     })}`,
   });
+
+  setTimeout(() => {
+    isPreventUserNavigate = false;
+  }, 200);
 };
 
 export const parseQuery = (query) => {

@@ -1,43 +1,67 @@
-<view class="product">
-  <view tiki:if="{{isLoading}}">
-    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"/>
-    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"/>
-    <view class="skeleton skeleton-font-medium skeleton-100-width"/>
+<view class="bid__item">
+  <view tiki:if="{{ isLoading }}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"></view>
+    <view
+      class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"
+    ></view>
+    <view class="skeleton skeleton-font-medium skeleton-100-width"></view>
   </view>
-  <view
-    tiki:else
-    catchTap="_onBidClick"
-  >
-    <image
-      class="radius-8px mb-2x-small radius-8px items-center"
-      style="width: 118px; height: 178px;"
-      src="{{product.thumbnail}}"
-    />
-    <text
-      class="bid-item-title"
-      number-of-lines="{{3}}"
-    >
-      {{product.name}}
-    </text>
-    <view class="flex items-center">
-      <text
-      class="bid-item-title"
-      number-of-lines="{{1}}"
-    >
-      {{product.no_bidding_counter}}
-    </text>
-      <text
-        class="bid-item-title"
-        number-of-lines="{{1}}"
-      >
-        {{product.latest_bidding_info}}
+  <view tiki:else>
+    <view class="bid__content">
+      <view class="bid__img">
+        <image class="img" src="{{ product.thumbnail }}" mode="widthFix"></image>
+      </view>
+      <text class="bid__title" number-of-lines="{{ 3 }}">
+        {{ product.name }}
       </text>
-      <text
-      class="bid-item-title"
-      number-of-lines="{{1}}"
-    >
-      {{product.bid_seconds}}
-    </text>
+      <view class="bid__people">
+        <view class="imgs">
+          <image
+            class="img"
+            src="https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png"
+            mode="widthFix"
+          ></image>
+          <image
+            class="img img__last"
+            src="https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png"
+            mode="widthFix"
+          ></image>
+          <image
+            class="img img__last"
+            src="https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png"
+            mode="widthFix"
+          ></image>
+        </view>
+        <text class="number">
+          {{ product.no_bidding_counter }}
+        </text>
+        <text class="text">người đang bid </text>
+      </view>
+
+      <view class="bid__countdown">
+        <count-down deadline="{{ product.bid_seconds }}" />
+      </view>
+      <view class="bid__new">
+        {{ product.latest_bidding_name }} vừa bid 
+        <text class="active"> {{ product.latest_bidding_amount }} </text>
+        ASA
+      </view>
+
+      <text class="bid__label">
+        Bạn muốn bid 👇
+      </text>
+      <view class="bid__actions">
+        <view class="bid__input">
+          <image
+            class="icon"
+            src="/images/ic_astra.png"
+            mode="widthFix"
+          ></image>
+          <input class="input" value="12.5" />
+        </view>
+
+        <button class="bid__cta" onTap="_onBidClick">Bid lun!</button>
+      </view>
     </view>
   </view>
 </view>

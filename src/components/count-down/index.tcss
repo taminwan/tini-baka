@@ -1,0 +1,27 @@
+.count_down__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count_down__inner {
+  width: 41px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 21.9643px;
+  line-height: 32px;
+  border: 1px solid #58ffe1;
+}
+
+.count_down__divider {
+  margin-left: 6px;
+  margin-right: 6px;
+  color: #58ffe1;
+  font-weight: 400;
+  font-size: 21.9643px;
+  line-height: 32px;
+}

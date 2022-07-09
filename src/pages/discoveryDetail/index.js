@@ -1,3 +1,5 @@
+import { switchTab } from "../../utils/navigate";
+
 Page({
   onLoad(query) {
     console.log("query", query);
@@ -49,6 +51,13 @@ Page({
 
   handleBack() {
     my.navigateBack();
+  },
+
+  toMyHub() {
+    my.navigateBack();
+    switchTab({
+      page: "warehouse",
+    });
   },
 
   handleToggle() {

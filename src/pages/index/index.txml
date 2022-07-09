@@ -1,34 +1,42 @@
-<view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
+<view class="wrap {{ fixedHeader ? 'fix-search' : '' }}">
   <view class="top">
-    <image class="header-bg" src="/images/header_bg.png" />
-    <image class="top-logo" src="/images/BAKA_LOGO.svg" />
+    <image class="header-bg" src="/images/header_bg.png"></image>
+    <image class="top-logo" src="/images/BAKA_LOGO.svg"></image>
   </view>
-
-  <view>
-    <tabs tabs="{{tabs}}" tabsName="activeTab" onTabClick="handleTabClick" onChange="handleTabChange"
-      activeTab="{{activeTab}}" swipeable="{{isSwipeable}}" hasSubTitle="{{true}}"
-      tabContentHeight="{{activeTab === 0 ? '150px' : activeTab === 2 ? '200px' : '50vh'}}"
-      tabBarBackgroundColor="#0000" tabBarUnderlineHeight="3px" tabBarUnderlineWidth="31px" tabBarUnderlineColor="white"
-      tabBarActiveTextColor="white" stickyBar="{{true}}">
-      <block tiki:for="{{tabs}}" tiki:if="{{!isSwipeable}}">
-        <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" tiki:if="{{index === 0}}">
-          <view class="tab-content">
-            <view class="bid-product" tiki:if="{{!isLoading}}">
-              <bid-item product="{{bidProduct}}" isLoading="{{isLoading}}" />
-              <view class="blue__button" onTap="navigateToRanking">
-                <text class="text" number-of-lines="{{ 1 }}">
-                  Bid lun!
-                </text>
-              </view>
-            </view>
-          </view>
-        </tab-content>
-        <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" tiki:elif="{{index === 1}}">
-          <view class="tab-content" tiki:if="{{!isLoading}}" tiki:for="{{stalkProducts}}">
-            <stalk-item propsItem="{{item}}" isLoading="{{isLoading}}" />
-          </view>
-        </tab-content>
-      </block>
-    </tabs>
+  <view class="page__wrapper">
+    <tabs
+      class="page__tabs"
+      tabs="{{ tabs }}"
+      tabsName="activeTab"
+      onTabClick="handleTabClick"
+      onChange="handleTabChange"
+      activeTab="{{ activeTab }}"
+      swipeable="{{ isSwipeable }}"
+      hasSubTitle="{{ true }}"
+      tabBarBackgroundColor="#0000"
+      tabBarUnderlineHeight="3px"
+      tabBarUnderlineWidth="31px"
+      tabBarUnderlineColor="white"
+      tabBarActiveTextColor="white"
+    ></tabs>
+    <view class="page__content">
+      <view tiki:if="{{ activeTab === 0 }}">
+        <view class="bid-product" tiki:if="{{ !isLoading }}">
+          <bid-item
+            product="{{ bidProduct }}"
+            isLoading="{{ isLoading }}"
+            onBidClick="navigateToRanking"
+          ></bid-item>
+        </view>
+      </view>
+      <view tiki:if="{{ activeTab === 1 }}">
+        <block tiki:for="{{ stalkProducts }}">
+          <stalk-item
+            propsItem="{{ item }}"
+            isLoading="{{ isLoading }}"
+          ></stalk-item>
+        </block>
+      </view>
+    </view>
   </view>
 </view>

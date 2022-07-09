@@ -1,21 +1,137 @@
-.bid-item-badge {
-  font-size: 10px;
-  background: #ff424e;
+.bid__item {
+  background: rgba(196, 196, 196, 0.08);
+  border-radius: 6px;
+  padding: 24px 8px;
 }
 
-.bid-item-old-price {
-  font-size: 10px;
-  text-decoration-line: line-through;
+.bid__img {
+  text-align: center;
+  margin-bottom: 24px;
 }
 
-.bid-item image,
-.bid-item-image-skeleton {
-  width: auto;
-  height: 0;
-  padding-bottom: 100%;
+.bid__img .img {
+  width: 118px;
+  height: 178px;
+  object-fit: cover;
 }
 
-.bid-item-title {
-  font-size: 16px;
-  color: #fff;
+.bid__title {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.bid__people {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.bid__people .imgs {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.bid__people .img {
+  width: 27px;
+  height: 27px;
+  object-fit: cover;
+}
+.bid__people .img__last {
+  margin-left: -8px;
+}
+
+.bid__people .number {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #00fabe;
+  margin-right: 5px;
+}
+.bid__people .text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bid__countdown {
+  margin-bottom: 16px
+}
+
+.bid__new {
+  background: rgba(39, 39, 42, 0.5);
+  padding: 8px 16px;
+  color: rgba(102, 205, 255, 0.8);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.bid__new .active { 
+  color: #66CDFF;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.bid__label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.bid__actions {
+  display: flex;
+  align-items: center;
+}
+
+.bid__actions .bid__input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid #3391FF;
+  width: 100%;
+  padding-left: 32px;
+}
+
+.bid__actions .bid__input .icon {
+  width: 20px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  margin-top: -10px;
+}
+.bid__actions .bid__input .input {
+  background: transparent;
+  border: none;
+  height: 46px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.bid__cta {
+  background: linear-gradient(236.29deg, #58FFE1 -42.07%, #1369E9 80.95%);
+  border-radius: 30px !important;
+  width: 94px;
+  height: 48px;
+  min-width: 94px;
+  margin-left: 10px;
+  border: none;
 }
