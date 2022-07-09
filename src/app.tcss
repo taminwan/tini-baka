@@ -12,6 +12,7 @@
   --button-width: 50px;
   --top-icon-size: 24px;
   --color-alias-outline-variant: 0px;
+  --color-dialog-background-default: #3a3939;
 }
 
 .wrap {

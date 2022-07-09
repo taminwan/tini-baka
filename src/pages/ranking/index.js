@@ -82,10 +82,6 @@ Page({
       modal: {},
     });
 
-    // my.alert({
-    //   content: 'item' + JSON.stringify(e.target.dataset),
-    // });
-
     if(e.target.dataset.item.action == 'ok') {
       this.onConfirmBiddingClick(4000)
     }
