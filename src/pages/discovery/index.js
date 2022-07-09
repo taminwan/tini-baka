@@ -7,27 +7,27 @@ Page({
     listComicola: [
       {
         id: 1,
-        name: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
+        name: "Con Đường Hồi Giáo",
         price: 50,
-        thumbnail_url: "/images/product/product_item.jpg",
+        thumbnail_url: "/images/for_demo/con_duong.png",
       },
       {
         id: 2,
-        name: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
+        name: "Ikigami",
         price: 5,
-        thumbnail_url: "/images/product/product_item.jpg",
+        thumbnail_url: "/images/for_demo/ikigami.png",
       },
       {
         id: 3,
-        name: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
+        name: "Sapiens",
         price: 5,
-        thumbnail_url: "/images/product/product_item.jpg",
+        thumbnail_url: "/images/for_demo/sapients.png",
       },
       {
         id: 4,
-        name: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
+        name: "Tâm Lý Học Về Tiền",
         price: 5,
-        thumbnail_url: "/images/product/product_item.jpg",
+        thumbnail_url: "/images/for_demo/tam_ly.png",
       },
     ],
     listToiCo: [
@@ -45,9 +45,9 @@ Page({
       },
       {
         id: 3,
-        name: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
+        name: "Mật Mã Tây Tạng 3",
         price: 5,
-        thumbnail_url: "/images/product/product_item.jpg",
+        thumbnail_url: "/images/for_demo/mat_ma.png",
       },
       {
         id: 4,
