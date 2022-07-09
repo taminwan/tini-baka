@@ -1,18 +1,14 @@
-<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}">
+</import-sjs>
 
-<view class="wrap {{ fixedHeader ? 'fix-search' : '' }}">
+<view class="wrap page__container {{ fixedHeader ? 'fix-search' : '' }}">
   <view class="top">
     <image class="header-bg" src="/images/header_bg.png"></image>
   </view>
   <view class="me__container">
     <view tiki:if="{{ hasUserData }}">
       <view class="me__avt">
-        <avatar
-          class="img"
-          name="{{ userName }}"
-          size="md"
-          src="{{ userAvatar }}"
-        ></avatar>
+        <avatar class="img" name="{{ userName }}" size="md" src="{{ userAvatar }}"></avatar>
       </view>
       <text class="me__name">{{ userName }}</text>
       <text class="me__des">Chuyên cày tiên hiệp</text>
@@ -30,7 +26,6 @@
         </view>
       </view>
     </view>
-
     <view class="me__item">
       <view class="left">
         <text class="label"> Lịch sử bidding</text>
@@ -55,5 +50,39 @@
         <icon class="icon" type="arrow_right" color="#ffffff"></icon>
       </view>
     </view>
+    <view class="me__btn" style="margin-top: 20px">
+      <button class="cta" onTap="onTap" data-modal="{{
+          type:'image',
+          showClose:true,
+      }}">
+        Redeem Asa Gift!
+      </button>
+    </view>
   </view>
+
+<modal show="{{ modal.type === 'image' }}" onModalClose="resetModal" onMaskClick="onMaskClick" className="bid_modal"
+  topImage="/images/BAKA_LOGO.svg" topImageSize="{{ modal.topImageSize }}" animationType="slide"
+  buttonsLayout="vertical" buttons="{{
+      [
+        {
+          type: 'solid',
+          text: 'Vào việc!',
+          action: 'ok',
+          extClass: 'bid_modal__confirm'
+        }
+      ]
+    }}" onButtonClick="onButtonClick">
+  <view slot="header">
+  </view>
+  <view slot="description">
+    <view class="bid_modal__des">
+      tặng bạn
+    </view>
+    <view style="position: relative;">
+      <image style="height: 150px;" src="/images/for_demo/win_bg.png"></image>
+      <text class="bid_modal__des active" style="font-size: 24px; margin-top: -120px;">12.345,67 ASA</text>
+    </view>
+    <view></view>
+  </view>
+</modal>
 </view>

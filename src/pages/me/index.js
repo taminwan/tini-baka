@@ -36,4 +36,25 @@ Page({
       },
     });
   },
+  resetModal() {
+    this.setData({
+      modal: {},
+    });
+  },
+  setModalState(nextModal) {
+    const newModalState = {
+      ...this.data.modal,
+      ...nextModal,
+    };
+
+    this.setData({
+      modal: newModalState,
+    });
+  },
+  onMaskClick() {
+    this.resetModal();
+  },
+  onTap(e) {
+    this.setModalState(e.target.dataset.modal);
+  },
 });
