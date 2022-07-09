@@ -190,3 +190,7 @@
   line-height: 22px;
   color: rgba(255, 255, 255, 0.8);
 }
+
+.tu-modal-image-md .tu-modal-image-element {
+  width: 70px !important;
+}
