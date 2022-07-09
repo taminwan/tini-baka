@@ -1,68 +1,119 @@
-<view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
+<view class="wrap page__container {{ fixedHeader ? 'fix-search' : '' }}">
   <view class="top">
-    <image class="header-bg" src="/images/header_bg.png" />
+    <image class="header-bg" src="/images/header_bg.png"></image>
+    <button
+      shape="rounded"
+      class="header-back"
+      onTap="handleBack"
+      iconName="arrow_left"
+    ></button>
   </view>
 
   <view class="page__content">
-    <view class="bid-product" tiki:if="{{!isLoading}}">
-      <bid-item product="{{bidProduct}}" isLoading="{{isLoading}}" />
+    <view class="bid-product" tiki:if="{{ !isLoading }}">
+      <bid-item
+        product="{{ bidProduct }}"
+        isLoading="{{ isLoading }}"
+        showBid="{{ false }}"
+        className="page__bid"
+      ></bid-item>
     </view>
 
-    <view tiki:for="{{rankingList}}">
-      <user-ranking userRankingInfo="{{item}}" isLoading="{{isLoading}}" />
+    <view class="page__ranking">
+      <text class="page__title"> Xếp hạng </text>
+      <view class="list" tiki:for="{{ rankingList }}">
+        <user-ranking
+          userRankingInfo="{{ item }}"
+          index="{{ index + 1 }}"
+          isLoading="{{ isLoading }}"
+        ></user-ranking>
+      </view>
     </view>
 
-    <text class="page__des" number-of-lines="{{ isShowmore ? false : 8 }}">
-      <text>{{productIntro.data}}</text>
-    </text>
-    <button onTap="handleToggle" type="ghost" class="page__toggle">
-      {{ !isShowmore ? "Xem thêm..." : "Thu gọn" }}
-    </button>
+    <view class="page__infos">
+      <text class="page__title"> Giới thiệu </text>
+      <view class="page__info">
+        <text class="label"> Tác Giả:</text>
+        <text class="value">{{ productIntro.author }}</text>
+      </view>
+      <view class="page__info">
+        <text class="label"> Hoạ Sĩ:</text>
+        <text class="value">{{ productIntro.artist }}</text>
+      </view>
+      <view class="page__info">
+        <text class="label"> Thể Loại:</text>
+        <text class="value">{{ productIntro.type }}</text>
+      </view>
+      <text class="page__des" number-of-lines="{{ isShowmore ? false : 4 }}">
+        <text>{{ productIntro.data }}</text>
+      </text>
+      <button onTap="handleToggle" type="ghost" class="page__toggle">
+        {{ !isShowmore ? "Xem thêm..." : "Thu gọn" }}
+      </button>
+    </view>
   </view>
-  <modal show="{{modal.type==='basic'}}" showClose="{{modal.showClose}}" buttons="{{[{type: 'outline', text: 'Cancel'}, {text: 'OK'}]
-        }}" onModalClose="resetModal" onMaskClick="onMaskClick" onButtonClick="onButtonClick">
-    <view slot="header">
-      <text>Title</text>
-    </view>
-    <view slot="description">
-      <text>Description</text>
-    </view>
-    <view class="modal-content">
-      Swap me!!!
-    </view>
-  </modal>
-  <modal show="{{modal.type==='image'}}" onModalClose="resetModal" onMaskClick="onMaskClick"
-    topImage='/images/for_demo/GOT.png' topImageSize="{{modal.topImageSize}}" animationType="slide"
-    buttonsLayout="vertical" buttons="{{
-      [
-        {type:'solid', text: 'Xác nhận', action: 'ok'},
-        {type:'outline', text: 'Huỷ', action: 'cancel'},
-      ]
-    }}" onButtonClick="onButtonClick">
-    <view slot="header">
-      <text>Ra giá</text>
-    </view>
-    <view slot="description">
-      <text>[Limited] A CLASH OF KINGS - tặng kèm token Iron Throne</text>
-      <view></view>
-      <text>Bid từ 4000 để vào TOP</text>
-      <view></view>
-      <text>* Bạn sẽ được hoàn lại nếu không phải là người thắng cuộc</text>
-    </view>
-    <!-- <view class="modal-content flex justify-around">
-          <button class="w-full mr-4x" data-size="md" onTap="changeImageSize">md</button>
-          <button class="w-full ml-4x" data-size="lg" onTap="changeImageSize">lg</button>
-        </view> -->
-  </modal>
 
   <view class="page__bottom">
     <view class="page__price">
       <image class="img" src="/images/ic_astra.png"></image>
-      <text class="text">4000</text>
+      <input class="input" value="4000" />
     </view>
-    <button class="page__action" onTap="onTap" data-modal="{{
+    <button
+      class="page__action"
+      onTap="onTap"
+      data-modal="{{
           type:'image',
           showClose:true,
-      }}">Bid lun!</button>
+      }}"
+    >
+      Bid lun!
+    </button>
   </view>
+
+  <modal
+    show="{{ modal.type === 'image' }}"
+    onModalClose="resetModal"
+    onMaskClick="onMaskClick"
+    topImage="/images/for_demo/GOT.png"
+    topImageSize="{{ modal.topImageSize }}"
+    animationType="slide"
+    buttonsLayout="vertical"
+    className="bid_modal"
+    buttons="{{
+      [
+        {
+          type: 'solid',
+          text: 'Xác nhận',
+          action: 'ok',
+          extClass: 'bid_modal__confirm'
+        },
+        {
+          type: 'outline',
+          text: 'Huỷ',
+          action: 'cancel',
+          extClass: 'bid_modal__cancel'
+        }
+      ]
+    }}"
+    onButtonClick="onButtonClick"
+  >
+    <view slot="description">
+      <text class="bid_modal__title">Ra giá</text>
+
+      <text class="bid_modal__name">
+        [Limited] A CLASH OF KINGS - tặng kèm token Iron Throne
+      </text>
+      <view class="bid_modal__des">
+        Bid từ <text class="active"> 4000 </text> để vào TOP
+      </view>
+
+      <view class="bid_modal__price">
+        <image class="img" src="/images/ic_astra.png"></image>
+        <input class="input" value="4000" />
+      </view>
+      <view class="bid_modal__note">
+        <text>* Bạn sẽ được hoàn lại nếu không phải là người thắng cuộc</text>
+      </view>
+    </view>
+  </modal>
 </view>

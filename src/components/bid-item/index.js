@@ -4,6 +4,7 @@ Component({
     isLoading: false,
     product: {},
     onBidClick: () => {},
+    showBid: true,
   },
 
   methods: {

@@ -1,4 +1,9 @@
-import { getBiddingProductDetails, getRankingList, getBiddingProductIntro, getRankingListOfWinner } from '../../services/index';
+import {
+  getBiddingProductDetails,
+  getRankingList,
+  getBiddingProductIntro,
+  getRankingListOfWinner,
+} from "../../services/index";
 
 Page({
   data: {
@@ -18,59 +23,53 @@ Page({
       const [bid_product, ranking_list, product_intro] = await Promise.all([
         getBiddingProductDetails(),
         getRankingList(),
-        getBiddingProductIntro()
+        getBiddingProductIntro(),
       ]);
 
-      console.log('Bid products reponse: ', bid_product)
-      console.log('Ranking reponse: ', ranking_list)
-      console.log('Intro reponse: ', product_intro)
+      console.log("Bid products reponse: ", bid_product);
+      console.log("Ranking reponse: ", ranking_list);
+      console.log("Intro reponse: ", product_intro);
 
       this.setData({
         bidProduct: bid_product,
         rankingList: ranking_list,
         productIntro: product_intro,
-        isLoading: false
+        isLoading: false,
       });
     } catch (error) {
-      console.log('Error: ', error)
+      console.log("Error: ", error);
       this.setData({
         isLoading: false,
       });
     }
   },
-
 
   async loadWinnerData() {
     try {
-      const [ranking_list] = await Promise.all([
-        getRankingListOfWinner()
-      ]);
-  
-      console.log('Winner ranking reponse: ', ranking_list);
-  
+      const [ranking_list] = await Promise.all([getRankingListOfWinner()]);
+
+      console.log("Winner ranking reponse: ", ranking_list);
+
       this.setData({
         rankingList: ranking_list,
-        isLoading: false
+        isLoading: false,
       });
     } catch (error) {
-      console.log('Error: ', error)
+      console.log("Error: ", error);
       this.setData({
         isLoading: false,
       });
     }
   },
 
-	onLoad(query) {
-	},
-	onReady() {
-    this.loadData()
-	},
-	onShow() {
-	},
-	onHide() {
-	},
-	onUnload() {
-	},
+  onLoad(query) {},
+  onReady() {
+    my.hideBackHome({ hide: true });
+    this.loadData();
+  },
+  onShow() {},
+  onHide() {},
+  onUnload() {},
 
   resetModal() {
     this.setData({
@@ -82,15 +81,15 @@ Page({
       modal: {},
     });
 
-    if(e.target.dataset.item.action == 'ok') {
-      this.onConfirmBiddingClick(4000)
+    if (e.target.dataset.item.action == "ok") {
+      this.onConfirmBiddingClick(4000);
     }
   },
   onConfirmBiddingClick(price) {
-    console.log("BIDDING: " + price)
+    console.log("BIDDING: " + price);
 
-    this.loadWinnerData()
-  }, 
+    this.loadWinnerData();
+  },
   setModalState(nextModal) {
     const newModalState = {
       ...this.data.modal,
@@ -111,5 +110,9 @@ Page({
   },
   onTap(e) {
     this.setModalState(e.target.dataset.modal);
+  },
+
+  handleBack() {
+    my.navigateBack();
   },
 });

@@ -1,4 +1,4 @@
-<view class="bid__item">
+<view class="bid__item {{ className }}">
   <view tiki:if="{{ isLoading }}">
     <view class="skeleton product-image-skeleton radius-8px mb-2x-small"></view>
     <view
@@ -46,21 +46,22 @@
         <text class="active"> {{ product.latest_bidding_amount }} </text>
         ASA
       </view>
+      <view tiki:if="{{ showBid }}">
+        <text class="bid__label">
+          Bạn muốn bid 👇
+        </text>
+        <view class="bid__actions">
+          <view class="bid__input">
+            <image
+              class="icon"
+              src="/images/ic_astra.png"
+              mode="widthFix"
+            ></image>
+            <input class="input" value="12.5" />
+          </view>
 
-      <text class="bid__label">
-        Bạn muốn bid 👇
-      </text>
-      <view class="bid__actions">
-        <view class="bid__input">
-          <image
-            class="icon"
-            src="/images/ic_astra.png"
-            mode="widthFix"
-          ></image>
-          <input class="input" value="12.5" />
+          <button class="bid__cta" onTap="_onBidClick">Bid lun!</button>
         </view>
-
-        <button class="bid__cta" onTap="_onBidClick">Bid lun!</button>
       </view>
     </view>
   </view>

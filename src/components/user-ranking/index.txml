@@ -1,25 +1,31 @@
-<view class="product">
-  <view tiki:if="{{isLoading}}">
-    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"/>
-    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"/>
-    <view class="skeleton skeleton-font-medium skeleton-100-width"/>
+<view class="rank_list {{ index === 1 ? 'first' : '' }}">
+  <view tiki:if="{{ isLoading }}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"></view>
+    <view
+      class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"
+    ></view>
+    <view class="skeleton skeleton-font-medium skeleton-100-width"></view>
   </view>
-  <view
-    tiki:else
-    catchTap="_onUserRankingClick"
-  >
-    <avatar src="{{userRankingInfo.avatar}}"/>
-    <text
-      class="bid-item-title"
-      number-of-lines="{{3}}"
-    >
-      {{userRankingInfo.name}}
-    </text>
-    <text
-      class="bid-item-title"
-      number-of-lines="{{3}}"
-    >
-      {{userRankingInfo.price}}
-    </text>
+  <view tiki:else catchTap="_onUserRankingClick">
+    <view class="rank__content">
+      <view class="rank__left">
+        <view class="rank__index"> {{ index }}. </view>
+        <image class="rank__avt" src="{{ userRankingInfo.avatar }}"></image>
+        <text class="rank__name" number-of-lines="{{ 1 }}">
+          {{ userRankingInfo.name }}
+        </text>
+      </view>
+      <view class="rank__left">
+        <text class="rank__price">
+          {{ userRankingInfo.price }}
+        </text>
+        <icon
+          type="play_glyph"
+          size="{{ 13 }}"
+          class="rank__icon {{ userRankingInfo.icStatus ? 'up' : 'down' }}"
+          color="{{ userRankingInfo.icStatus ? '#00FB55' : '#FB0000' }}"
+        ></icon>
+      </view>
+    </view>
   </view>
 </view>

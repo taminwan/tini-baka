@@ -3,6 +3,7 @@
   "usingComponents": {
     "bid-item": "components/bid-item/index",
     "user-ranking": "components/user-ranking/index",
-    "modal": "@tiki.vn/tini-ui/es/modal/index"
+    "modal": "@tiki.vn/tini-ui/es/modal/index",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index"
   }
 }

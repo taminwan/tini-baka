@@ -1,0 +1,44 @@
+.rank__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rank__left {
+  display: flex;
+  align-items: center;
+}
+.rank__avt {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  margin-right: 24px;
+  border-radius: 100%;
+}
+
+.rank__index {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #ebebf0;
+  margin-right: 8px;
+}
+.rank__name {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  color: #a6a6b0;
+}
+.rank__price {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.rank__icon {
+  transform: rotate(-90deg);
+}
+.rank__icon.down {
+  transform: rotate(90deg);
+}

@@ -43,7 +43,6 @@
         <text class="value">Hành Động</text>
       </view>
     </view>
-    <view class="page__des"> </view>
     <text class="page__des" number-of-lines="{{ isShowmore ? false : 3 }}">
       {{ product.descrition }}
     </text>

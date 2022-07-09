@@ -33,6 +33,53 @@ export const getRankingList = () => {
       avatar:
         "https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
       price: "3.313,45",
+      icStatus: 1,
+    },
+    {
+      name: "van.vuk",
+      avatar:
+        "https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png",
+      price: "313,12",
+      icStatus: 0,
+    },
+    {
+      name: "sonbui",
+      avatar:
+        "https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
+      price: "31",
+      icStatus: 1,
+    },
+    {
+      name: "Minwan",
+      avatar:
+        "https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
+      price: "3",
+      icStatus: 1,
+    },
+    {
+      name: "tinhhuynh",
+      avatar:
+        "https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
+      price: "0,5",
+      icStatus: 1,
+    },
+  ]);
+};
+
+export const getRankingListOfWinner = () => {
+  return fakeRequest([
+    {
+      name: "YOU-ARE-HERE",
+      avatar:
+        "https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png",
+      price: "4000",
+      icStatus: "",
+    },
+    {
+      name: "tung.tran",
+      avatar:
+        "https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
+      price: "3.313,45",
       icStatus: "",
     },
     {
@@ -66,50 +113,12 @@ export const getRankingList = () => {
   ]);
 };
 
-export const getRankingListOfWinner= () => {
-  return fakeRequest([
-    {
-      name:"YOU-ARE-HERE",
-      avatar:"https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png",
-      price: "4000",
-      icStatus: ""
-    },
-    {
-      name:"tung.tran",
-      avatar:"https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
-      price: "3.313,45",
-      icStatus: ""
-    },
-    {
-      name:"van.vuk",
-      avatar:"https://salt.tikicdn.com/ts/tiniapp/f1/8f/92/8ad3c2e0f1236800a1fa67b122bc366c.png",
-      price: "313,12",
-      icStatus: ""
-    },
-    {
-      name:"sonbui",
-      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
-      price: "31",
-      icStatus: ""
-    },
-    {
-      name:"Minwan",
-      avatar:"https://salt.tikicdn.com/cache/w100/ts/upload/9c/ca/37/d6e873b1421da32b76654bb274e46683.png.webp",
-      price: "3",
-      icStatus: ""
-    },
-    {
-      name:"tinhhuynh",
-      avatar:"https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
-      price: "0,5",
-      icStatus: ""
-    }
-  ]);
-};
-
 export const getBiddingProductIntro = () => {
   return fakeRequest({
-    data: "Tác Giả: Shin Jin Woo\nHoạ Sĩ: Hong Soon Sik\nThể Loại: Hành Động\n'Ở Hàn Quốc này, kẻ mạnh chính là luật. Có tiền thì vô tội, không tiền thì có tội'\n'Ở Hàn Quốc này, kẻ mạnh chính là luật. Có tiền thì vô tội, không tiền thì có tội'.\nCon gái của Kim Jin bị người ta bạo hành tập thể dẫn đến mất khả năng làm mẹ, nhưng những kẻ gây tội lại được tại ngoại vì có bố mẹ ...",
+    author: "Shin Jin Woo",
+    artist: "Hong Soon Sik",
+    type: "Hành Động",
+    data: "'Ở Hàn Quốc này, kẻ mạnh chính là luật. Có tiền thì vô tội, không tiền thì có tội'\n'Ở Hàn Quốc này, kẻ mạnh chính là luật. Có tiền thì vô tội, không tiền thì có tội'.\nCon gái của Kim Jin bị người ta bạo hành tập thể dẫn đến mất khả năng làm mẹ, nhưng những kẻ gây tội lại được tại ngoại vì có bố mẹ ...",
   });
 };
 
@@ -119,7 +128,7 @@ export const getStalktProducts = () => {
       seller: {
         name: "BAKA Official",
         time: "3 Tháng 7, 2022 - 13:24 ",
-        "avatar": "/images/baka_avatar.png"
+        avatar: "/images/baka_avatar.png",
       },
       from: "Góc BID",
       content: "Chú Thuật chưa bao giờ hết hot",
@@ -132,7 +141,8 @@ export const getStalktProducts = () => {
       seller: {
         name: "user.name123",
         time: "3 March, 2022 at 13:24 ",
-        "avatar": "https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png"
+        avatar:
+          "https://salt.tikicdn.com/ts/tiniapp/26/03/94/34cdc4c75c5fdd7939fdeae5938ae676.png",
       },
       from: "Góc review",
       content: "Đã đọc rồi thì không dứt ra được nha",
@@ -140,7 +150,7 @@ export const getStalktProducts = () => {
       title: "",
       isAllowToBid: false,
       no_bidding_counter: "",
-    }
+    },
   ]);
 };
 
@@ -159,7 +169,7 @@ export const getWarehouseWaitListing = () => {
       title: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
       isAllowToBuy: true,
       time: "",
-    }
+    },
   ]);
 };
 
@@ -170,7 +180,7 @@ export const getCollectionListing = () => {
       thumbnail: "/images/for_demo/kung_fu.png",
       title: "Kungfu tuyệt đỉnh đỉnh đỉnh...",
       isAllowToBuy: false,
-      progress: "Chương 23/500"
-    }
+      progress: "Chương 23/500",
+    },
   ]);
-}
+};
