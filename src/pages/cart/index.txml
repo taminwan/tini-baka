@@ -1,0 +1,20 @@
+<view class="wrap {{fixedHeader ? 'fix-search' : ''}}">
+
+  <text>Giao tới</text>
+  <text>Van Vu  |  0901234567</text>
+  <text>123 Nguyễn Đình Chiểu, Phường 6, Quận 3, TP. Hồ Chi Minh</text>
+
+
+  <text>Hình thức giao hàng</text>
+  <text>Giao hàng siêu tốc với Tiniship</text>
+  <text>Thời gian giao hàng dự kiến: 10/07/2022 - 15h</text>
+
+  <text>Hình thức thanh toán</text>
+  <text>Thanh toán với Tiki</text>
+  
+  
+  <text>Thanh toán trong 00:23:23</text>
+  <text>12.000 đ</text>
+
+  <button>Xác nhận</button>
+</view>

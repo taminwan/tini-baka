@@ -5,7 +5,8 @@
     "pages/warehouse/index",
     "pages/me/index",
     "pages/ranking/index",
-    "pages/discoveryDetail/index"
+    "pages/discoveryDetail/index",
+    "pages/cart/index"
   ],
   "window": {
     "defaultTitle": "",

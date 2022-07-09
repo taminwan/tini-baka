@@ -34,6 +34,12 @@ Page({
     }
   },
 
+  navigateToCart() {
+    my.navigateTo({
+      url: 'pages/cart/index',
+    });
+  },
+
 	onLoad(query) {
 	},
 	onReady() {

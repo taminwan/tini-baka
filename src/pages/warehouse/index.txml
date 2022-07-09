@@ -9,7 +9,7 @@
       Chờ chốt
     </text>
     <view tiki:for="{{waitProducts}}">
-      <wait-checkout-item product="{{item}}" isLoading="{{isLoading}}" />
+      <wait-checkout-item product="{{item}}" isLoading="{{isLoading}}" onWaitProductClick="navigateToCart"/>
     </view>
 
     <text class="warehouse__title">
