@@ -4,6 +4,7 @@ import {
   getBiddingProductIntro,
   getRankingListOfWinner,
 } from "../../services/index";
+import { switchTab } from "../../utils/navigate";
 
 Page({
   data: {
@@ -27,10 +28,6 @@ Page({
         getRankingList(),
         getBiddingProductIntro(),
       ]);
-
-      console.log("Bid products reponse: ", bid_product);
-      console.log("Ranking reponse: ", ranking_list);
-      console.log("Intro reponse: ", product_intro);
 
       this.setData({
         bidProduct: bid_product,
@@ -114,8 +111,9 @@ Page({
       this.onConfirmBiddingClick(4000);
     }
     if (e.target.dataset.item.action == "go_cart") {
-      my.navigateTo({
-        url: "pages/warehouse/index",
+      my.navigateBack();
+      switchTab({
+        page: "warehouse",
       });
     }
   },
