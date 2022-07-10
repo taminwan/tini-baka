@@ -23,9 +23,37 @@
     <button
       class="page__action"
       disabled="{{ !selected.length }}"
-      onTap="toHome"
-    >
+      onTap="onTap" data-modal="{{ type:'image', showClose:true }}">
       Đã chọn xong
     </button>
   </view>
+
+  <modal show="{{ modal.type === 'image' }}" onModalClose="resetModal" onMaskClick="onMaskClick" className="bid_modal"
+  topImage="/images/BAKA_LOGO.svg" topImageSize="{{ modal.topImageSize }}" animationType="slide"
+  buttonsLayout="vertical" buttons="{{
+      [
+        {
+          type: 'solid',
+          text: 'Vào việc!',
+          action: 'ok',
+          extClass: 'bid_modal__confirm'
+        }
+      ]
+    }}" onButtonClick="toHome">
+  <view slot="header">
+  </view>
+  <view slot="description">
+    <view class="bid_modal__des">
+      tặng bạn
+    </view>
+    <view class="bid_modal__prize">
+      <image class="prize__bg" src="/images/for_demo/win_bg.png"></image>
+      <view class="prize__text" >
+       <text class="active"> 12.345,67 </text> ASA
+      </view> 
+    </view>
+  </view>
+</modal>
+
+<audio id="audio1" class="sr-only" src="/sound/baka_audio.mp3" name="" author="Unknown" />
 </view>

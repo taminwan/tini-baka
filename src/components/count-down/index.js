@@ -1,7 +1,7 @@
 Component({
   props: {
     className: "",
-    deadline: "Jul 11 2022 12:00:00 GMT+0700 (Indochina Time)",
+    deadline: "Jul 11 2022 16:00:00 GMT+0700 (Indochina Time)",
   },
   data: {
     hours: 0,

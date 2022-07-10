@@ -18,6 +18,7 @@ Page({
       "Isekai",
     ],
     selected: [],
+    modal: {},
   },
   onReady() {
     my.hideBackHome({ hide: true });
@@ -50,5 +51,30 @@ Page({
         openAsa: 1,
       },
     });
+  },
+
+  onTap(e) {
+    var audio = my.createAudioContext("audio1");
+    audio.play();
+    this.setModalState(e.target.dataset.modal);
+  },
+
+  resetModal() {
+    this.setData({
+      modal: {},
+    });
+  },
+  setModalState(nextModal) {
+    const newModalState = {
+      ...this.data.modal,
+      ...nextModal,
+    };
+
+    this.setData({
+      modal: newModalState,
+    });
+  },
+  onMaskClick() {
+    this.resetModal();
   },
 });
