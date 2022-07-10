@@ -27,17 +27,19 @@
           <view class="left">
             <image
               class="img"
-              src="/images/for_demo/GOT.png"
+              src="/images/for_demo/ti_phu.png"
               mode="widthFix"
             ></image>
           </view>
           <view class="right">
-            <text class="name"> A Clash of Kings </text>
+            <text class="name"
+              >Tỷ phú bán giày (được CEO Tiki ký tặng độc quyền)
+            </text>
 
             <view class="price">
               <text class="label">Giá: </text>
               <text class="number">
-                {{ moneyFormatter(65, " ASA") }}
+                {{ moneyFormatter(12000, " đ") }}
               </text>
             </view>
           </view>

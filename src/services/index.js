@@ -4,8 +4,8 @@ export const getBiddingProducts = () => {
   return fakeRequest([
     {
       id: 6816541,
-      name: "[Limited] A CLASH OF KINGS - tặng kèm token Iron Throne",
-      thumbnail: "/images/for_demo/GOT.png",
+      name: "Tỷ phú bán giày (được CEO Tiki ký tặng độc quyền)",
+      thumbnail: "/images/for_demo/ti_phu.png",
       no_bidding_counter: "9.123.124",
       bid_seconds: 24,
       latest_bidding_name: "Sonbui Son",
@@ -28,8 +28,8 @@ export const getBiddingProducts = () => {
 export const getBiddingProductDetails = () => {
   return fakeRequest({
     id: 6816541,
-    name: "[Limited] A CLASH OF KINGS - tặng kèm token Iron Throne",
-    thumbnail: "/images/for_demo/GOT.png",
+    name: "Tỷ phú bán giày (được CEO Tiki ký tặng độc quyền)",
+    thumbnail: "/images/for_demo/ti_phu.png",
     no_bidding_counter: "9.123.124",
     bid_seconds: 24,
     latest_bidding_name: "Sonbui Son",
@@ -170,18 +170,18 @@ export const getWarehouseWaitListing = () => {
   return fakeRequest([
     {
       price: "12000",
-      thumbnail: "/images/for_demo/GOT.png",
-      title: "A Clash of Kings",
+      thumbnail: "/images/for_demo/ti_phu.png",
+      title: "Tỷ phú bán giày (được CEO Tiki ký tặng độc quyền)",
       isAllowToBuy: true,
       time: "",
     },
-    {
-      price: "50",
-      thumbnail: "/images/product/product_item.jpg",
-      title: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
-      isAllowToBuy: true,
-      time: "",
-    },
+    // {
+    //   price: "50",
+    //   thumbnail: "/images/product/product_item.jpg",
+    //   title: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
+    //   isAllowToBuy: true,
+    //   time: "",
+    // },
   ]);
 };
 
@@ -189,8 +189,8 @@ export const getCollectionListing = () => {
   return fakeRequest([
     {
       content: "Đã đọc rồi thì không dứt ra được nha",
-      thumbnail: "/images/for_demo/kung_fu.png",
-      title: "Kungfu tuyệt đỉnh đỉnh đỉnh...",
+      thumbnail: "/images/product/product_item.jpg",
+      title: "Ẩm thực miêu ký - dành cho tuổi 12+ trở lên ...",
       isAllowToBuy: false,
       progress: 23,
       price: 12.5,

@@ -75,7 +75,7 @@
     show="{{ modal.type === 'image' }}"
     onModalClose="resetModal"
     onMaskClick="onMaskClick"
-    topImage="/images/for_demo/GOT.png"
+    topImage="{{ bidProduct.thumbnail }}"
     topImageSize="{{ modal.topImageSize }}"
     animationType="slide"
     buttonsLayout="vertical"
@@ -102,7 +102,7 @@
       <text class="bid_modal__title">Ra giá</text>
 
       <text class="bid_modal__name">
-        [Limited] A CLASH OF KINGS - tặng kèm token Iron Throne
+        {{ bidProduct.name }}
       </text>
       <view class="bid_modal__des">
         Bid từ <text class="active"> 4000 </text> để vào TOP
@@ -166,7 +166,7 @@
       <view class="bid_modal__product">
         <image
           class="img"
-          src="/images/for_demo/GOT.png"
+          src="{{ bidProduct.thumbnail }}"
           mode="widthFix"
         ></image>
       </view>
